@@ -1,0 +1,80 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{smith}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Smith}{S.}%
+     {Steven~W.}{S.~W.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {California Technical Publishing}%
+  }
+  \strng{namehash}{SSW1}
+  \strng{fullhash}{SSW1}
+  \field{edition}{First}
+  \field{isbn}{0-9660176-3-3}
+  \field{title}{The Scientist and Engineer's Guide to Digital Signal
+  Processing}
+  \list{location}{1}{%
+    {San Diego, CA 92150-2407, USA}%
+  }
+  \field{year}{1997}
+\endentry
+
+\entry{shambro}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Shambro}{S.}%
+     {Joe}{J.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{SJ1}
+  \strng{fullhash}{SJ1}
+  \field{title}{Condenser vs. Dynamic Microphones}
+  \verb{url}
+  \verb http://homerecording.about.com/od/microphones101/a/mic_types.htm
+  \endverb
+  \field{year}{2014}
+\endentry
+
+\entry{white}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {White}{W.}%
+     {Paul}{P.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{WP1}
+  \strng{fullhash}{WP1}
+  \field{title}{Mic Types \& Characteristics}
+  \verb{url}
+  \verb http://www.soundonsound.com/sos/apr98/articles/mic_types.html
+  \endverb
+  \field{month}{04}
+  \field{year}{1998}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput
