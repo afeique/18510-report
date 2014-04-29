@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.21)  29 APR 2014 13:42
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.21)  29 APR 2014 15:58
 entering extended mode
 **report.tex
 (C:\Users\s\Dropbox\18510\report\report.tex
@@ -483,18 +483,18 @@ File: english.lbx 2013/11/25 v2.8a biblatex localization (PK/JW/AB)
 \@quotereset=\count227
 
 (C:\Users\s\Dropbox\18510\report\report.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 251.
-LaTeX Font Info:    ... okay on input line 251.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 251.
-LaTeX Font Info:    ... okay on input line 251.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 251.
-LaTeX Font Info:    ... okay on input line 251.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 251.
-LaTeX Font Info:    ... okay on input line 251.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 251.
-LaTeX Font Info:    ... okay on input line 251.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 251.
-LaTeX Font Info:    ... okay on input line 251.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 250.
+LaTeX Font Info:    ... okay on input line 250.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 250.
+LaTeX Font Info:    ... okay on input line 250.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 250.
+LaTeX Font Info:    ... okay on input line 250.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 250.
+LaTeX Font Info:    ... okay on input line 250.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 250.
+LaTeX Font Info:    ... okay on input line 250.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 250.
+LaTeX Font Info:    ... okay on input line 250.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 Package biblatex Info: No input encoding detected.
@@ -505,8 +505,8 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'report.bbl' found.
 
 (C:\Users\s\Dropbox\18510\report\report.bbl)
-Package biblatex Info: Reference section=0 on input line 251.
-Package biblatex Info: Reference segment=0 on input line 251.
+Package biblatex Info: Reference section=0 on input line 250.
+Package biblatex Info: Reference segment=0 on input line 250.
 
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -523,42 +523,51 @@ Package biblatex Info: Reference segment=0 on input line 251.
 \everyMPtoPDFconversion=\toks25
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 320.
+(Font)              <7> on input line 317.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 320.
- <dynamic_v_condenser.png, id=1, 1457.445pt x 515.9275pt>
-File: dynamic_v_condenser.png Graphic file (type png)
+(Font)              <5> on input line 317.
+ <OktavaMK319vsShureSM58.png, id=1, 1457.445pt x 515.9275pt>
+File: OktavaMK319vsShureSM58.png Graphic file (type png)
 
-<use dynamic_v_condenser.png>
-Package pdftex.def Info: dynamic_v_condenser.png used on input line 324.
+<use OktavaMK319vsShureSM58.png>
+Package pdftex.def Info: OktavaMK319vsShureSM58.png used on input line 323.
 (pdftex.def)             Requested size: 262.04987pt x 92.76059pt.
 
-Overfull \hbox (9.0pt too wide) in paragraph at lines 324--325
+Overfull \hbox (9.0pt too wide) in paragraph at lines 323--324
  [][] 
  []
+
+<SensorStructure.png, id=2, 347.2975pt x 200.75pt>
+File: SensorStructure.png Graphic file (type png)
+ <use SensorStructure.png>
+Package pdftex.def Info: SensorStructure.png used on input line 335.
+(pdftex.def)             Requested size: 173.64832pt x 100.37474pt.
 
 [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
- <C:/Users/s/Dropbox/18510/report/dynamic_v_condenser.png (PNG copy)>]
+ <C:/Users/s/Dropbox/18510/report/OktavaMK319vsShureSM58.png (PNG copy)> <C:/Us
+ers/s/Dropbox/18510/report/SensorStructure.png (PNG copy)>] [2
+
+]
 (C:\Users\s\Dropbox\18510\report\report.aux)
 Package logreq Info: Writing requests to 'report.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 8773 strings out of 493921
- 143360 string characters out of 3147294
- 313877 words of memory out of 3000000
- 11999 multiletter control sequences out of 15000+200000
+ 8787 strings out of 493921
+ 143660 string characters out of 3147294
+ 316877 words of memory out of 3000000
+ 12012 multiletter control sequences out of 15000+200000
  38502 words of font info for 68 fonts, out of 3000000 for 9000
  844 hyphenation exceptions out of 8191
- 39i,7n,58p,828b,1168s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,7n,58p,907b,1177s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
 s/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/font
 s/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/time
 s/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on report.pdf (1 page, 134019 bytes).
+Output written on report.pdf (2 pages, 156804 bytes).
 PDF statistics:
- 24 PDF objects out of 1000 (max. 8388607)
+ 28 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -3,9 +3,7 @@ The style file: biblatex.bst
 Database file #1: report-blx.bib
 Database file #2: IEEEabrv.bib
 Database file #3: report.bib
-Illegal end of database file---line 111 of file report.bib
- : @online{fig1
- :             
-I'm skipping whatever remains of this entry
+Warning--I'm ignoring white's extra "year" field
+--line 96 of file report.bib
 Biblatex version: 2.8
-(There was 1 error message)
+(There was 1 warning)

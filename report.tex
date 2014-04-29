@@ -4,7 +4,6 @@
 % Some very useful LaTeX packages include:
 % (uncomment the ones you want to load)
 
-
 % *** MISC UTILITY PACKAGES ***
 %
 %\usepackage{ifpdf}
@@ -270,8 +269,8 @@
 }
 
 % The paper headers
-\markboth{Sensor~System~Design~18-510, Spring~2014}%
-{Sheikh,~Sakai: Condenser~Microphone}
+\markboth{18-510 Capstone Design Report: 05/05/2014}{Sheikh, Sakai}
+
 % The only time the second header will appear is for the odd numbered pages
 % after the title page when using the twoside option.
 % 
@@ -287,7 +286,7 @@
 
 \begin{abstract}
 %\boldmath
-For the application of voice recording, a simple and cheap condenser-microphone design is considered. Analysis of theoretical characteristics such as sensitivity, dynamic range, and signal-to-noise ratio is presented. In conclusion, quantitative measurements from a working prototype are corroborated with the theoretical analysis and compared against desired performance characteristics.
+For the application of accurate voice reproduction, a cost-effective condenser microphone design is considered. Analysis of theoretical characteristics such as sensitivity, dynamic range, and signal-to-noise ratio is presented. In conclusion, quantitative measurements from a working prototype are corroborated with the theoretical analysis and compared against desirable performance criteria.
 \end{abstract}
 % IEEEtran.cls defaults to using nonbold math in the Abstract.
 % This preserves the distinction between vectors and scalars. However,
@@ -315,22 +314,29 @@ Capacitive, Condenser, Microphone.
 
 \section{Introduction}
 
-\IEEEPARstart{T}{he} accurate transduction of sound into an electrical signal is naturally useful for conveying the human voice. Human conversation typically occurs within the range of 40-60 dB SPL. Human hearing is in the range of 20~Hz to 20~kHz but it is most sensitive to sounds in the 1~kHz to 4~kHz range.\supercite{smith} Consequently, these are typical ranges of interest in sound transducer design. For the application of accurate sound reproduction, the designer should strive for unity-gain response in these frequency ranges.
+\IEEEPARstart{T}{he} accurate transduction of sound into an electrical signal is naturally useful for conveying the human voice. People generally speak at 40~to~60~dB~SPL and can hear sound from 20~Hz~up~to~20~kHz with especial sensitivity to the 1~to~4~kHz region.\supercite{smith} For the application of accurate sound reproduction, the designer should strive for unity-gain response in these ranges, particularly in the 1~to~4~kHz range.
 \par
-A variety of devices exist for transducing sound. Of commercially viable designs, condenser and dynamic microphones are the most common.~\supercite{shambro} Fig. \ref{fig:OktavaMK319vsShureSM58} It is not unusual for condenser microphones to have an upper 20~kHz frequency limit compared to the typical 16~kHz limit of dynamic microphones.~\supercite{white} This makes a condenser microphone preferable for accuracy. 
+A variety of devices exist for transducing sound. Of commercially viable designs, condenser and dynamic microphones are the most common.~\supercite{shambro} Fig. \ref{fig:OktavaMK319vsShureSM58} illustrates response differences between typical condenser and dynamic microphones in the band of interest. The condenser microphone (in red) experiences less attenuation at the extremes and provides greater uniformity in between. It is not unusual for condenser microphones to have an upper 20~kHz frequency limit compared to the typical 16~kHz limit of dynamic microphones.~\supercite{white} Additionally, the condenser microphone has notably less gain in the 1~to~4~kHz region people are most sensitive to, providing a considerably more balanced response. Taken altogether, condenser-based designs are preferable for applications desiring accurate reproduction.
 \par
 \begin{figure}[ht]
   \centering
     \includegraphics[width=0.5\textwidth]{OktavaMK319vsShureSM58.png}
-  \caption{\em Oktava~MK-319 condenser microphone~\supercite{oktava} and Shure~SM58 dynamic microphone\supercite{shure} frequency responses}
+  \caption{\em Oktava~MK-319 condenser microphone~\supercite{oktava} and Shure~SM58 dynamic microphone\supercite{shure} (20~Hz to 20~kHz)}
+	\label{fig:OktavaMK319vsShureSM58}
 \end{figure}
-\label{fig:OktavaMK319vsShureSM58}
-
-
-
 
 
 \section{Sensor Structure and Measurement Principle}
+The layout of the sensor portion of the condenser microphone is depicted in Fig. \ref{fig:SensorStructure}. The diaphragm is a thin membrane with acoustic mass that is responsive to air pressure in the target frequency range. The back-plate is a rigid structure offering acoustic impedance through equispaced holes leading into a cavity with acoustic compliance. The complete system is an acoustic mass-impedance-compliance network with a specific resonant frequency.
+
+\par
+\begin{figure}[ht]
+  \centering
+    \includegraphics[scale=0.5]{SensorStructure.png}
+  \caption{Condenser microphone structure~\supercite{torio}}
+	\label{fig:SensorStructure}
+\end{figure}
+
 
 \hfill A. Sheikh, J. Sakai
  
