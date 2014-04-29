@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.21)  28 APR 2014 12:57
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.21)  29 APR 2014 11:11
 entering extended mode
 **report.tex
 (C:\Users\s\Dropbox\18510\report\report.tex
@@ -99,7 +99,97 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 \@IEEEtmpitemindent=\dimen116
 \c@IEEEbiography=\count90
 \@IEEEtranrubishbin=\box26
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\biblatex.sty"
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip44
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks15
+\ex@=\dimen117
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen118
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count91
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count92
+\leftroot@=\count93
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count94
+\DOTSCASE@=\count95
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box27
+\strutbox@=\box28
+\big@size=\dimen119
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count96
+\c@MaxMatrixCols=\count97
+\dotsspace@=\muskip10
+\c@parentequation=\count98
+\dspbrk@lvl=\count99
+\tag@help=\toks16
+\row@=\count100
+\column@=\count101
+\maxfields@=\count102
+\andhelp@=\toks17
+\eqnshift@=\dimen120
+\alignsep@=\dimen121
+\tagshift@=\dimen122
+\tagwidth@=\dimen123
+\totwidth@=\dimen124
+\lineht@=\dimen125
+\@envbody=\toks18
+\multlinegap=\skip45
+\multlinetaggap=\skip46
+\mathdisplay@stack=\toks19
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen126
+\extrarowheight=\dimen127
+\NC@list=\toks20
+\extratabsurround=\skip47
+\backup@length=\skip48
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\mdwtools\mdwmath.sty"
+Package: mdwmath 1996/04/11 1.1 Nice mathematical things
+\sq@sqrt=\count103
+LaTeX Info: Redefining \sqrt on input line 84.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\mdwtools\mdwtab.sty"
+Package: mdwtab 1998/04/28 1.9 Table typesetting with style
+\tab@state=\count104
+\tab@columns=\count105
+\tab@preamble=\toks21
+\tab@shortline=\toks22
+\extrarowheight=\dimen128
+\tabextrasep=\dimen129
+\arrayextrasep=\dimen130
+\smarraycolsep=\dimen131
+\smarrayextrasep=\dimen132
+\tab@width=\dimen133
+\col@sep=\dimen134
+\tab@endheight=\dimen135
+\tab@leftskip=\skip49
+\tab@rightskip=\skip50
+\fn@notes=\box29
+\fn@width=\dimen136
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\biblatex.sty"
 Package: biblatex 2013/11/25 v2.8a programmable bibliographies (PK/JW/AB)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\biblatex1.sty"
@@ -111,17 +201,17 @@ Package: etoolbox 2011/01/03 v2.1 e-TeX tools for LaTeX
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\misc\etex.sty"
 Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
-\et@xins=\count91
+\et@xins=\count106
 )
-\etb@tempcnta=\count92
+\etb@tempcnta=\count107
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
-\KV@toks@=\toks15
+\KV@toks@=\toks23
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\logreq\logreq.sty"
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count93
+\lrq@indent=\count108
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\logreq\logreq.def"
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
@@ -130,124 +220,124 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
-\Urlmuskip=\muskip10
+\Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-\c@tabx@nest=\count94
-\c@listtotal=\count95
-\c@listcount=\count96
-\c@liststart=\count97
-\c@liststop=\count98
-\c@citecount=\count99
-\c@citetotal=\count100
-\c@multicitecount=\count101
-\c@multicitetotal=\count102
-\c@instcount=\count103
-\c@maxnames=\count104
-\c@minnames=\count105
-\c@maxitems=\count106
-\c@minitems=\count107
-\c@citecounter=\count108
-\c@savedcitecounter=\count109
-\c@uniquelist=\count110
-\c@uniquename=\count111
-\c@refsection=\count112
-\c@refsegment=\count113
-\c@maxextrayear=\count114
-\c@maxextraalpha=\count115
-\c@abbrvpenalty=\count116
-\c@highnamepenalty=\count117
-\c@lownamepenalty=\count118
-\c@maxparens=\count119
-\c@parenlevel=\count120
-\blx@tempcnta=\count121
-\blx@tempcntb=\count122
-\blx@tempcntc=\count123
-\blx@maxsection=\count124
-\blx@maxsegment=\count125
-\blx@notetype=\count126
-\blx@parenlevel@text=\count127
-\blx@parenlevel@foot=\count128
-\labelnumberwidth=\skip44
-\labelalphawidth=\skip45
-\shorthandwidth=\skip46
-\biblabelsep=\skip47
-\bibitemsep=\skip48
-\bibnamesep=\skip49
-\bibinitsep=\skip50
-\bibparsep=\skip51
-\bibhang=\skip52
+\c@tabx@nest=\count109
+\c@listtotal=\count110
+\c@listcount=\count111
+\c@liststart=\count112
+\c@liststop=\count113
+\c@citecount=\count114
+\c@citetotal=\count115
+\c@multicitecount=\count116
+\c@multicitetotal=\count117
+\c@instcount=\count118
+\c@maxnames=\count119
+\c@minnames=\count120
+\c@maxitems=\count121
+\c@minitems=\count122
+\c@citecounter=\count123
+\c@savedcitecounter=\count124
+\c@uniquelist=\count125
+\c@uniquename=\count126
+\c@refsection=\count127
+\c@refsegment=\count128
+\c@maxextrayear=\count129
+\c@maxextraalpha=\count130
+\c@abbrvpenalty=\count131
+\c@highnamepenalty=\count132
+\c@lownamepenalty=\count133
+\c@maxparens=\count134
+\c@parenlevel=\count135
+\blx@tempcnta=\count136
+\blx@tempcntb=\count137
+\blx@tempcntc=\count138
+\blx@maxsection=\count139
+\blx@maxsegment=\count140
+\blx@notetype=\count141
+\blx@parenlevel@text=\count142
+\blx@parenlevel@foot=\count143
+\labelnumberwidth=\skip51
+\labelalphawidth=\skip52
+\shorthandwidth=\skip53
+\biblabelsep=\skip54
+\bibitemsep=\skip55
+\bibnamesep=\skip56
+\bibinitsep=\skip57
+\bibparsep=\skip58
+\bibhang=\skip59
 \blx@auxin=\read1
 \blx@auxout=\write3
-\c@mincomprange=\count129
-\c@maxcomprange=\count130
-\c@mincompwidth=\count131
-\c@labelname=\count132
-\c@savedlabelname=\count133
-\c@author=\count134
-\c@savedauthor=\count135
-\c@shortauthor=\count136
-\c@savedshortauthor=\count137
-\c@editor=\count138
-\c@savededitor=\count139
-\c@editora=\count140
-\c@savededitora=\count141
-\c@editorb=\count142
-\c@savededitorb=\count143
-\c@editorc=\count144
-\c@savededitorc=\count145
-\c@shorteditor=\count146
-\c@savedshorteditor=\count147
-\c@bookauthor=\count148
-\c@savedbookauthor=\count149
-\c@translator=\count150
-\c@savedtranslator=\count151
-\c@annotator=\count152
-\c@savedannotator=\count153
-\c@commentator=\count154
-\c@savedcommentator=\count155
-\c@introduction=\count156
-\c@savedintroduction=\count157
-\c@foreword=\count158
-\c@savedforeword=\count159
-\c@afterword=\count160
-\c@savedafterword=\count161
-\c@holder=\count162
-\c@savedholder=\count163
-\c@namea=\count164
-\c@savednamea=\count165
-\c@nameb=\count166
-\c@savednameb=\count167
-\c@namec=\count168
-\c@savednamec=\count169
-\c@institution=\count170
-\c@savedinstitution=\count171
-\c@language=\count172
-\c@savedlanguage=\count173
-\c@location=\count174
-\c@savedlocation=\count175
-\c@organization=\count176
-\c@savedorganization=\count177
-\c@origlocation=\count178
-\c@savedoriglocation=\count179
-\c@origpublisher=\count180
-\c@savedorigpublisher=\count181
-\c@pageref=\count182
-\c@savedpageref=\count183
-\c@publisher=\count184
-\c@savedpublisher=\count185
-\c@lista=\count186
-\c@savedlista=\count187
-\c@listb=\count188
-\c@savedlistb=\count189
-\c@listc=\count190
-\c@savedlistc=\count191
-\c@listd=\count192
-\c@savedlistd=\count193
-\c@liste=\count194
-\c@savedliste=\count195
-\c@listf=\count196
-\c@savedlistf=\count197
+\c@mincomprange=\count144
+\c@maxcomprange=\count145
+\c@mincompwidth=\count146
+\c@labelname=\count147
+\c@savedlabelname=\count148
+\c@author=\count149
+\c@savedauthor=\count150
+\c@shortauthor=\count151
+\c@savedshortauthor=\count152
+\c@editor=\count153
+\c@savededitor=\count154
+\c@editora=\count155
+\c@savededitora=\count156
+\c@editorb=\count157
+\c@savededitorb=\count158
+\c@editorc=\count159
+\c@savededitorc=\count160
+\c@shorteditor=\count161
+\c@savedshorteditor=\count162
+\c@bookauthor=\count163
+\c@savedbookauthor=\count164
+\c@translator=\count165
+\c@savedtranslator=\count166
+\c@annotator=\count167
+\c@savedannotator=\count168
+\c@commentator=\count169
+\c@savedcommentator=\count170
+\c@introduction=\count171
+\c@savedintroduction=\count172
+\c@foreword=\count173
+\c@savedforeword=\count174
+\c@afterword=\count175
+\c@savedafterword=\count176
+\c@holder=\count177
+\c@savedholder=\count178
+\c@namea=\count179
+\c@savednamea=\count180
+\c@nameb=\count181
+\c@savednameb=\count182
+\c@namec=\count183
+\c@savednamec=\count184
+\c@institution=\count185
+\c@savedinstitution=\count186
+\c@language=\count187
+\c@savedlanguage=\count188
+\c@location=\count189
+\c@savedlocation=\count190
+\c@organization=\count191
+\c@savedorganization=\count192
+\c@origlocation=\count193
+\c@savedoriglocation=\count194
+\c@origpublisher=\count195
+\c@savedorigpublisher=\count196
+\c@pageref=\count197
+\c@savedpageref=\count198
+\c@publisher=\count199
+\c@savedpublisher=\count200
+\c@lista=\count201
+\c@savedlista=\count202
+\c@listb=\count203
+\c@savedlistb=\count204
+\c@listc=\count205
+\c@savedlistc=\count206
+\c@listd=\count207
+\c@savedlistd=\count208
+\c@liste=\count209
+\c@savedliste=\count210
+\c@listf=\count211
+\c@savedlistf=\count212
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
@@ -259,13 +349,13 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\biblatex.def"
 File: biblatex.def 
-\c@textcitecount=\count198
-\c@textcitetotal=\count199
-\c@textcitemaxnames=\count200
-\c@biburlnumpenalty=\count201
-\c@biburlucpenalty=\count202
-\c@biburllcpenalty=\count203
-\c@smartand=\count204
+\c@textcitecount=\count213
+\c@textcitetotal=\count214
+\c@textcitemaxnames=\count215
+\c@biburlnumpenalty=\count216
+\c@biburlucpenalty=\count217
+\c@biburllcpenalty=\count218
+\c@smartand=\count219
 )
 Package biblatex Info: Trying to load bibliography style 'ieee'...
 Package biblatex Info: ... file 'ieee.bbx' found.
@@ -287,8 +377,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\bbx\standard.bbx"
 File: standard.bbx 2013/11/25 v2.8a biblatex bibliography style (PK/JW/AB)
-\c@bbx:relatedcount=\count205
-\c@bbx:relatedtotal=\count206
+\c@bbx:relatedcount=\count220
+\c@bbx:relatedtotal=\count221
 ))))
 Package biblatex Info: Trying to load citation style 'ieee'...
 Package biblatex Info: ... file 'ieee.cbx' found.
@@ -300,8 +390,8 @@ Package biblatex Info: ... file 'numeric-comp.cbx' found.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\cbx\numeric-comp.cbx"
 File: numeric-comp.cbx 2013/11/25 v2.8a biblatex citation style (PK/JW/AB)
-\c@cbx@tempcnta=\count207
-\c@cbx@tempcntb=\count208
+\c@cbx@tempcnta=\count222
+\c@cbx@tempcntb=\count223
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -323,95 +413,33 @@ Package biblatex Info: ... file 'biblatex.cfg' found.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\biblatex.cfg"
 File: biblatex.cfg 
 )))
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
-Package: amsmath 2013/01/14 v2.14 AMS math features
-\@mathmargin=\skip53
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-For additional information on amsmath, use the `?' option.
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
-Package: amstext 2000/06/29 v2.01
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
-File: amsgen.sty 1999/11/30 v2.0
-\@emptytoks=\toks16
-\ex@=\dimen117
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count224
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
-Package: amsbsy 1999/11/29 v1.2d
-\pmbraise@=\dimen118
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
-Package: amsopn 1999/12/14 v2.01 operator names
-)
-\inf@bad=\count209
-LaTeX Info: Redefining \frac on input line 210.
-\uproot@=\count210
-\leftroot@=\count211
-LaTeX Info: Redefining \overline on input line 306.
-\classnum@=\count212
-\DOTSCASE@=\count213
-LaTeX Info: Redefining \ldots on input line 378.
-LaTeX Info: Redefining \dots on input line 381.
-LaTeX Info: Redefining \cdots on input line 466.
-\Mathstrutbox@=\box27
-\strutbox@=\box28
-\big@size=\dimen119
-LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
-\macc@depth=\count214
-\c@MaxMatrixCols=\count215
-\dotsspace@=\muskip11
-\c@parentequation=\count216
-\dspbrk@lvl=\count217
-\tag@help=\toks17
-\row@=\count218
-\column@=\count219
-\maxfields@=\count220
-\andhelp@=\toks18
-\eqnshift@=\dimen120
-\alignsep@=\dimen121
-\tagshift@=\dimen122
-\tagwidth@=\dimen123
-\totwidth@=\dimen124
-\lineht@=\dimen125
-\@envbody=\toks19
-\multlinegap=\skip54
-\multlinetaggap=\skip55
-\mathdisplay@stack=\toks20
-LaTeX Info: Redefining \[ on input line 2665.
-LaTeX Info: Redefining \] on input line 2666.
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
-Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen126
-\extrarowheight=\dimen127
-\NC@list=\toks21
-\extratabsurround=\skip56
-\backup@length=\skip57
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\mdwtools\mdwmath.sty"
-Package: mdwmath 1996/04/11 1.1 Nice mathematical things
-\sq@sqrt=\count221
-LaTeX Info: Redefining \sqrt on input line 84.
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\mdwtools\mdwtab.sty"
-Package: mdwtab 1998/04/28 1.9 Table typesetting with style
-\tab@state=\count222
-\tab@columns=\count223
-\tab@preamble=\toks22
-\tab@shortline=\toks23
-\extrarowheight=\dimen128
-\tabextrasep=\dimen129
-\arrayextrasep=\dimen130
-\smarraycolsep=\dimen131
-\smarrayextrasep=\dimen132
-\tab@width=\dimen133
-\col@sep=\dimen134
-\tab@endheight=\dimen135
-\tab@leftskip=\skip58
-\tab@rightskip=\skip59
-\fn@notes=\box29
-\fn@width=\dimen136
+\Gin@req@height=\dimen137
+\Gin@req@width=\dimen138
 )
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
@@ -419,22 +447,22 @@ Package biblatex Info: ... file 'english.lbx' found.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\lbx\english.lbx"
 File: english.lbx 2013/11/25 v2.8a biblatex localization (PK/JW/AB)
 )
-\@quotelevel=\count224
-\@quotereset=\count225
+\@quotelevel=\count225
+\@quotereset=\count226
 
 (C:\Users\s\Dropbox\18510\report\report.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 248.
-LaTeX Font Info:    ... okay on input line 248.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 248.
-LaTeX Font Info:    ... okay on input line 248.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 248.
-LaTeX Font Info:    ... okay on input line 248.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 248.
-LaTeX Font Info:    ... okay on input line 248.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 248.
-LaTeX Font Info:    ... okay on input line 248.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 248.
-LaTeX Font Info:    ... okay on input line 248.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 251.
+LaTeX Font Info:    ... okay on input line 251.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 251.
+LaTeX Font Info:    ... okay on input line 251.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 251.
+LaTeX Font Info:    ... okay on input line 251.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 251.
+LaTeX Font Info:    ... okay on input line 251.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 251.
+LaTeX Font Info:    ... okay on input line 251.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 251.
+LaTeX Font Info:    ... okay on input line 251.
 Package biblatex Info: No input encoding detected.
 (biblatex)             Assuming 'ascii'.
 Package biblatex Info: Automatic encoding selection.
@@ -443,33 +471,60 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'report.bbl' found.
 
 (C:\Users\s\Dropbox\18510\report\report.bbl)
-Package biblatex Info: Reference section=0 on input line 248.
-Package biblatex Info: Reference segment=0 on input line 248.
+Package biblatex Info: Reference section=0 on input line 251.
+Package biblatex Info: Reference segment=0 on input line 251.
+
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count227
+\scratchdimen=\dimen139
+\scratchbox=\box30
+\nofMPsegments=\count228
+\nofMParguments=\count229
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count230
+\MPscratchDim=\dimen140
+\MPnumerator=\count231
+\makeMPintoPDFobject=\count232
+\everyMPtoPDFconversion=\toks25
+)
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 508.
+(Font)              <7> on input line 318.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 508.
- [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
+(Font)              <5> on input line 318.
+ <dynamic_v_condenser.png, id=1, 1457.445pt x 515.9275pt>
+File: dynamic_v_condenser.png Graphic file (type png)
+
+<use dynamic_v_condenser.png>
+Package pdftex.def Info: dynamic_v_condenser.png used on input line 324.
+(pdftex.def)             Requested size: 262.04987pt x 92.76059pt.
+
+Overfull \hbox (9.0pt too wide) in paragraph at lines 324--325
+ [][] 
+ []
+
+[1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
-] (C:\Users\s\Dropbox\18510\report\report.aux)
+ <C:/Users/s/Dropbox/18510/report/dynamic_v_condenser.png (PNG copy)>]
+(C:\Users\s\Dropbox\18510\report\report.aux)
 Package logreq Info: Writing requests to 'report.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 6862 strings out of 493921
- 112650 string characters out of 3147294
- 281548 words of memory out of 3000000
- 10124 multiletter control sequences out of 15000+200000
+ 7736 strings out of 493921
+ 124542 string characters out of 3147294
+ 295359 words of memory out of 3000000
+ 10969 multiletter control sequences out of 15000+200000
  37366 words of font info for 67 fonts, out of 3000000 for 9000
  844 hyphenation exceptions out of 8191
- 39i,5n,48p,828b,952s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,5n,48p,828b,945s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
 s/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/font
 s/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/time
 s/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on report.pdf (1 page, 56581 bytes).
+Output written on report.pdf (1 page, 133107 bytes).
 PDF statistics:
- 23 PDF objects out of 1000 (max. 8388607)
+ 24 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
