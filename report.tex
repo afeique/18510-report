@@ -116,7 +116,7 @@
 % subfigure.sty has been superceeded by subfig.sty.
 
 
-
+\usepackage[justification=centering]{caption}
 %\usepackage[caption=false]{caption}
 %\usepackage[font=footnotesize]{subfig}
 % subfig.sty, also written by Steven Douglas Cochran, is the modern
@@ -315,16 +315,16 @@ Capacitive, Condenser, Microphone.
 
 \section{Introduction}
 
-\IEEEPARstart{T}{he} transduction of sound into an electrical signal using a microphone is naturally useful for conveying the human voice. Human conversation typically occurs within the range of 40-60 dB SPL at a frequency range of about 20~Hz to 20~kHz.~\supercite{smith} When converting human speech into an electrical signal, to ensure the output accurately represents the source, the microphone should strive for unity-gain response in the frequency range of interest.
+\IEEEPARstart{T}{he} accurate transduction of sound into an electrical signal is naturally useful for conveying the human voice. Human conversation typically occurs within the range of 40-60 dB SPL. Human hearing is in the range of 20~Hz to 20~kHz but it is most sensitive to sounds in the 1~kHz to 4~kHz range.\supercite{smith} Consequently, these are typical ranges of interest in sound transducer design. For the application of accurate sound reproduction, the designer should strive for unity-gain response in these frequency ranges.
 \par
-A variety of devices exist for transducing sound. Of commercially viable designs, condenser and dynamic microphones are the most common.~\supercite{shambro} It is not unusual for condenser microphones to have an upper 20~kHz frequency limit whereas dynamic microphones tend to have a 16~kHz limit.~\supercite{white} This makes a condenser microphone preferable for applications involving voice. Fig. \ref{fig:dynamic_v_condenser} shows the frequency responses of an Oktava~MK-319, a large-diaphragm condenser microphone,~\supercite{oktava} and the Shure~SM58, a dynamic moving-coil microphone.\supercite{shure}
+A variety of devices exist for transducing sound. Of commercially viable designs, condenser and dynamic microphones are the most common.~\supercite{shambro} Fig. \ref{fig:OktavaMK319vsShureSM58} It is not unusual for condenser microphones to have an upper 20~kHz frequency limit compared to the typical 16~kHz limit of dynamic microphones.~\supercite{white} This makes a condenser microphone preferable for accuracy. 
 \par
 \begin{figure}[ht]
   \centering
-    \includegraphics[width=0.5\textwidth]{dynamic_v_condenser.png}
-  \caption{Dynamic vs. Condenser Frequency Response}
+    \includegraphics[width=0.5\textwidth]{OktavaMK319vsShureSM58.png}
+  \caption{\em Oktava~MK-319 condenser microphone~\supercite{oktava} and Shure~SM58 dynamic microphone\supercite{shure} frequency responses}
 \end{figure}
-\label{fig:dynamic_v_condenser}
+\label{fig:OktavaMK319vsShureSM58}
 
 
 

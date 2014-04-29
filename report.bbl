@@ -16,29 +16,6 @@
   {}
 \endgroup
 
-\entry{smith}{book}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Smith}{S.}%
-     {Steven~W.}{S.~W.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {California Technical Publishing}%
-  }
-  \strng{namehash}{SSW1}
-  \strng{fullhash}{SSW1}
-  \field{edition}{First}
-  \field{isbn}{0-9660176-3-3}
-  \field{title}{The Scientist and Engineer's Guide to Digital Signal
-  Processing}
-  \list{location}{1}{%
-    {San Diego, CA 92150-2407, USA}%
-  }
-  \field{year}{1997}
-\endentry
-
 \entry{shambro}{online}{}
   \name{author}{1}{}{%
     {{}%
