@@ -287,7 +287,7 @@
 
 \begin{abstract}
 %\boldmath
-For the application of accurate voice reproduction, a cost-effective condenser microphone design is considered. Analysis of theoretical characteristics such as sensitivity, dynamic range, and signal-to-noise ratio is presented. In conclusion, quantitative measurements from a working prototype are corroborated with the theoretical analysis and compared against desirable performance criteria.
+For the application of accurate voice reproduction, a cost-effective condenser microphone design is considered. Analysis of theoretical characteristics such as sensitivity, dynamic range, and signal-to-noise ratio is presented. In conclusion, quantitative measurements from a working prototype are corroborated with the theoretical analysis.
 \end{abstract}
 % IEEEtran.cls defaults to using nonbold math in the Abstract.
 % This preserves the distinction between vectors and scalars. However,
@@ -317,34 +317,32 @@ Capacitive, Condenser, Microphone.
 
 \IEEEPARstart{T}{he} accurate transduction of sound into an electrical signal is naturally useful for conveying the human voice. People generally speak at 40~to~60~dB~SPL and can hear sound from 20~Hz~up~to~20~kHz with especial sensitivity to the 1~to~4~kHz region.\supercite{smith} For the application of accurate sound reproduction, the designer should strive for unity-gain response in these ranges, particularly in the 1~to~4~kHz range.
 
-A variety of devices exist for transducing sound. Of commercially viable designs, condenser and dynamic microphones are the most common.~\supercite{shambro} Fig. \ref{fig:OktavaMK319vsShureSM58} plots the responses of a condenser microphone and a dynamic microphone. The condenser mic (in red) experiences less attenuation at the extremes and provides greater uniformity in between. It is not unusual for condenser mics to have an upper 20~kHz frequency limit compared to the typical 16~kHz limit experienced by dynamic mics.~\supercite{white} Additionally, the condenser microphone has notably less gain in the 1~to~4~kHz region people are most sensitive to, providing a more balanced response. Generalizing these results, condenser microphones are preferable for applications desiring accurate reproduction.
-	
 \begin{figure}[ht]
   \centering
-	\includegraphics[width=0.5\textwidth]{OktavaMK319vsShureSM58.png}
+	\includegraphics[width=0.45\textwidth]{OktavaMK319vsShureSM58.png}
   \caption{\em Oktava~MK-319 condenser microphone~\supercite{oktava} and Shure~SM58 dynamic microphone\supercite{shure} (20~Hz to 20~kHz)}
 	\label{fig:OktavaMK319vsShureSM58}
 \end{figure}
 
-\section{Sensor Structure and Measurement Principle}
+A variety of devices exist for transducing sound. Of commercially viable designs, condenser and dynamic microphones are the most common.~\supercite{shambro} Fig. \ref{fig:OktavaMK319vsShureSM58} plots the responses of a condenser microphone and a dynamic microphone. The condenser mic (in red) experiences less attenuation at the extremes and provides greater uniformity in between. It is not unusual for condenser mics to have an upper 20~kHz frequency limit compared to the typical 16~kHz limit experienced by dynamic mics.~\supercite{white} Additionally, the condenser microphone has notably less gain in the 1~to~4~kHz region people are most sensitive to, providing a more balanced response. Generalizing these results, condenser microphones are preferable for applications desiring accurate reproduction.
+
 \begin{figure}[ht]
   \centering
-	\includegraphics[scale=0.5]{DiaphragmSystem.png}
-  \caption{\em Condenser microphone diaphragm system~\supercite{torio}}
+	\includegraphics[scale=0.4]{DiaphragmSystem.png}
+  \caption{\em Diaphragm system vertical cross-section~\supercite{torio}}
 	\label{fig:DiaphragmSystem}
 \end{figure}
+
+\section{Sensor Structure and Measurement Principle}
+
+Condenser microphones work by converting sound pressure into a change in capacitance across a DC-biased condenser. The condenser has a diaphragm membrane that can be deflected by sound pressure. When sound causes membrane deflection, the capacitance of the condenser varies. This capacitance delta produces a corresponding change in voltage on the circuit the condenser is tied to. The resultant AC small-signal can then be extracted from the microphone circuit to obtain a voltage representation of the source sound.
 
 The diaphragm portion of the condenser microphone has a cylindrical form-factor. Its vertical cross-section is depicted in Fig. \ref{fig:DiaphragmSystem}. The diaphragm itself is a thin, tensioned membrane which is responsive to sound pressure in the target frequency range. The back-plate is a rigid structure with distributed holes leading to an internal cavity. Between the membrane and the back-plate is the air-gap which forms the condenser dielectric. An acoustic resistance at the rear of the internal cavity serves as a normalizing vent, allowing the cavity to equalize to atmospheric pressure.
 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.35]{MembraneDeflection.png}
-	\caption{\em Modeled parabolic membrane deflection owing to uniform sound pressure\supercite{schomburg}}
-	\label{fig:MembraneDeflection}
-\end{figure}
-
-\begin{figure}[ht]
-	\centering
+	
 	\begin{tabular}{ c | l }
 		\hline
 		\bf Symbol & \bf Description \\
@@ -357,15 +355,15 @@ The diaphragm portion of the condenser microphone has a cylindrical form-factor.
 		$\Delta p$ & change in pressure relative to $P_0$ caused by sound \\
 		$F_{p,z}$ & force due to uniform pressure across membrane \\
 		$F_{f,z}$ & force due to membrane tension and frame \\
-		
 	\end{tabular}
-	\caption{\em Symbols used in membrane deflection analysis}
-	\label{tab:MembraneSymbols}
+	
+	\caption{\em Modeled parabolic membrane deflection owing to uniform sound pressure\supercite{schomburg}}
+	\label{fig:MembraneDeflection}
 \end{figure}
 
 \subsection{Membrane Deflection}
 
-When sound pressure impinges upon the membrane, it oscillates with the pressure according to its mechanical properties. Fig. \ref{fig:MembraneDeflection} shows modeled parabolic deflection in cylindrical coordinates. The modeled parabolic deflection assumes sound pressure is uniformly distributed across the face of the membrane. This produces purely vertical membrane oscillation along the $z$-axis in cylindrical coordinates, with the apex deflection $w_0$ occurring at the center of the membrane owing to the moment arm at that point.
+When sound pressure impinges upon the membrane, it oscillates with the pressure according to its mechanical properties. Fig. \ref{fig:MembraneDeflection} shows modeled parabolic deflection in cylindrical coordinates. The modeled parabolic deflection assumes sound pressure is uniformly distributed across the face of the membrane. This produces purely vertical membrane oscillation along the $z$-axis in cylindrical coordinates, with the apex deflection $w_0$ occurring at the center of the membrane owing to the maximized moment arm at that point.
 
 Setting residual stress $\sigma_0=0$, we can solve for the apex deflection using the relation\supercite{schomburg}:
 
@@ -374,10 +372,7 @@ Setting residual stress $\sigma_0=0$, we can solve for the apex deflection using
 		\Delta p = \frac{4w_0 d_m}{R_M^2} \frac{E_M}{1-v_M^2} \left( \frac{4}{3} \frac{d_M^2}{R_M^2} + \sigma_0 + \frac{64}{105} \frac{w_0^2}{R_M^2} \right)
 		\label{eq:Apex}
 	\end{equation}
-\end{figure}
 
-\begin{figure}[ht]
-	\centering
 	\begin{tabular}{ c | l }
 		\hline
 		\bf Symbol & \bf Description \\
@@ -386,11 +381,10 @@ Setting residual stress $\sigma_0=0$, we can solve for the apex deflection using
 		$E_M$ & Young's Modulus of elasticity for the membrane \\
 		$v_M$ & Poisson's ratio for the membrane \\
 	\end{tabular}
-	\caption{\em Symbols used in apex deflection relationship to $\Delta p$}
-	\label{tab:ApexSymbols}
+	\label{eq:ApexPressureRel}
 \end{figure}
 
-The apex deflection $w_0$ can then be used to calculate the modeled parabolic deflection at any radius $r$ using the relation:
+The apex deflection $w_0$ can then be used to calculate the modeled parabolic deflection at any radius $r$ using:
 
 \begin{figure}[ht]
 	\begin{equation}
@@ -401,7 +395,7 @@ The apex deflection $w_0$ can then be used to calculate the modeled parabolic de
 
 \subsection{Capacitance}
 
-Let the air-gap between the membrane and back-plate be denoted by $h_0$. If we treat the face of the membrane as a collection of  cylindrical area differentials with $dA = r\,dr\,d\theta$ we can find the total capacitance under deflection by integrating the differential capacitances $dC$:
+Let the back-plate be held at $z=h_0$ above the membrane to create the dielectric air-gap. Assume the membrane has a positive apex deflection $w_0>0$ and is deflected up towards the back-plate due to sound pressure. If we treat the face of the membrane as a collection of cylindrical area differentials with $dA = r\,dr\,d\theta$ we can find the total capacitance under deflection by integrating the differential capacitances $dC$:
 
 \begin{figure}[ht]
 	\begin{equation}
@@ -414,6 +408,8 @@ Let the air-gap between the membrane and back-plate be denoted by $h_0$. If we t
 		\label{eq:DefCap}
 	\end{equation}
 \end{figure}
+
+Negative apex deflection $w_0<0$ indicates deflection \emph{away} from the back-plate and produces the expression $h_0+w_0$ in the denominator of the natural logarithm.
 
 \subsection{Voltage}
 
