@@ -352,7 +352,7 @@ The diaphragm portion of the condenser microphone has a cylindrical form-factor.
 		$r$ & radius in cylindrical coordinates \\
 		$R_M$ & membrane radius \\
 		$w$ & deflection along $z$-axis at a particular radius \\
-		$w_c$ & central (apex) deflection, equal to $w(r=0)$ \\
+		$w_0$ & apex of deflection, equal to $w(r=0)$ \\
 		$P_0$ & atmospheric pressure \\
 		$\Delta p$ & change in pressure relative to $P_0$ caused by sound \\
 		$F_{p,z}$ & force due to uniform pressure across membrane \\
@@ -365,26 +365,57 @@ The diaphragm portion of the condenser microphone has a cylindrical form-factor.
 
 \subsection{Membrane Deflection}
 
-When sound pressure impinges upon the membrane, it oscillates with the pressure according to its mechanical properties. Fig. \ref{fig:MembraneDeflection} and Fig. \ref{tab:MembraneSymbols} show modeled parabolic deflection and definitions for the symbolic parameters. The modeled parabolic deflection assumes sound pressure is uniformly distributed across the face of the membrane. This produces purely vertical membrane oscillation along the $z$-axis in cylindrical coordinates, with the greatest deflection $w_c$ occurring at the center of the membrane at the point with the largest moment arm relative to the circumference.
+When sound pressure impinges upon the membrane, it oscillates with the pressure according to its mechanical properties. Fig. \ref{fig:MembraneDeflection} shows modeled parabolic deflection in cylindrical coordinates. The modeled parabolic deflection assumes sound pressure is uniformly distributed across the face of the membrane. This produces purely vertical membrane oscillation along the $z$-axis in cylindrical coordinates, with the apex deflection $w_0$ occurring at the center of the membrane owing to the moment arm at that point.
 
-The deflection at any radius $r$ in cylindrical coordinates is described by\supercite{schomburg}:
+Setting residual stress $\sigma_0=0$, we can solve for the apex deflection using the relation\supercite{schomburg}:
 
 \begin{figure}[ht]
 	\begin{equation}
-		w(r) = w_c\left(1-\frac{r^2}{R_M^2}\right)
+		\Delta p = \frac{4w_0 d_m}{R_M^2} \frac{E_M}{1-v_M^2} \left( \frac{4}{3} \frac{d_M^2}{R_M^2} + \sigma_0 + \frac{64}{105} \frac{w_0^2}{R_M^2} \right)
+		\label{eq:Apex}
+	\end{equation}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\begin{tabular}{ c | l }
+		\hline
+		\bf Symbol & \bf Description \\
+		\hline
+		$\sigma_0$ & residual stress, modeled with $\sigma_0=0$ \\
+		$E_M$ & Young's Modulus of elasticity for the membrane \\
+		$v_M$ & Poisson's ratio for the membrane \\
+	\end{tabular}
+	\caption{\em Symbols used in apex deflection relationship to $\Delta p$}
+	\label{tab:ApexSymbols}
+\end{figure}
+
+The apex deflection $w_0$ can then be used to calculate the modeled parabolic deflection at any radius $r$ using the relation:
+
+\begin{figure}[ht]
+	\begin{equation}
+		w(r) = w_0\left(1-\frac{r^2}{R_M^2}\right)
 		\label{eq:Deflection}
 	\end{equation}
 \end{figure}
 
+\subsection{Capacitance}
 
-\subsection{Subsection Heading Here}
-Subsection text here.
+Let the air-gap between the membrane and back-plate be denoted by $h_0$. If we treat the face of the membrane as a collection of  cylindrical area differentials with $dA = r\,dr\,d\theta$ we can find the total capacitance under deflection by integrating the differential capacitances $dC$:
 
-% needed in second column of first page if using \IEEEpubid
-%\IEEEpubidadjcol
+\begin{figure}[ht]
+	\begin{equation}
+		\int_A dC = \int_A \frac{\epsilon_0\,dA}{h_0-w(r)} %= \int_0^{R_M} \int_0^{2\pi} \frac{\epsilon_0 r}{h_0-w(r)}\,d\theta\,dr
+		\label{eq:DiffCap}
+	\end{equation}
+	
+	\begin{equation}
+		C = \frac{\pi\epsilon_0 R_M^2}{w_0} \mathrm{ln}\left(\frac{h_0}{h_0-w_0}\right)
+		\label{eq:DefCap}
+	\end{equation}
+\end{figure}
 
-\subsubsection{Subsubsection Heading Here}
-Subsubsection text here.
+\subsectoin{Voltage}
 
 
 % An example of a floating figure using the graphicx package.

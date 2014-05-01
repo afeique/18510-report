@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.21)  1 MAY 2014 14:18
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.21)  1 MAY 2014 18:42
 entering extended mode
 **report.tex
 (C:\Users\s\Dropbox\18510\report\report.tex
@@ -562,15 +562,19 @@ Underfull \vbox (badness 2150) has occurred while \output is active []
 
  <C:/Users/s/Dropbox/18510/report/OktavaMK319vsShureSM58.png (PNG copy)> <C:/Us
 ers/s/Dropbox/18510/report/DiaphragmSystem.png (PNG copy)> <C:/Users/s/Dropbox/
-18510/report/MembraneDeflection.png (PNG copy)>] [2] (C:\Users\s\Dropbox\18510\
-report\report.aux)
+18510/report/MembraneDeflection.png (PNG copy)>]
+Overfull \hbox (3.45824pt too wide) in paragraph at lines 381--389
+ [][] 
+ []
+
+[2] (C:\Users\s\Dropbox\18510\report\report.aux)
 Package logreq Info: Writing requests to 'report.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 8803 strings out of 493921
- 143963 string characters out of 3147294
- 315869 words of memory out of 3000000
- 12026 multiletter control sequences out of 15000+200000
+ 8807 strings out of 493921
+ 144012 string characters out of 3147294
+ 317869 words of memory out of 3000000
+ 12030 multiletter control sequences out of 15000+200000
  39609 words of font info for 69 fonts, out of 3000000 for 9000
  844 hyphenation exceptions out of 8191
  39i,9n,58p,857b,1183s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -584,7 +588,7 @@ cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKT
 eX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 1/urw/times/utmri8a.pfb>
-Output written on report.pdf (2 pages, 263236 bytes).
+Output written on report.pdf (2 pages, 272307 bytes).
 PDF statistics:
  53 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
