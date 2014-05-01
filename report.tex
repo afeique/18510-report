@@ -246,6 +246,7 @@
 % correct bad hyphenation here
 \hyphenation{op-tical net-works semi-conduc-tor}
 
+\renewcommand{\arraystretch}{1.25}
 
 \begin{document}
 %
@@ -315,33 +316,67 @@ Capacitive, Condenser, Microphone.
 \section{Introduction}
 
 \IEEEPARstart{T}{he} accurate transduction of sound into an electrical signal is naturally useful for conveying the human voice. People generally speak at 40~to~60~dB~SPL and can hear sound from 20~Hz~up~to~20~kHz with especial sensitivity to the 1~to~4~kHz region.\supercite{smith} For the application of accurate sound reproduction, the designer should strive for unity-gain response in these ranges, particularly in the 1~to~4~kHz range.
-\par
-A variety of devices exist for transducing sound. Of commercially viable designs, condenser and dynamic microphones are the most common.~\supercite{shambro} Fig. \ref{fig:OktavaMK319vsShureSM58} illustrates response differences between typical condenser and dynamic microphones in the band of interest. The condenser microphone (in red) experiences less attenuation at the extremes and provides greater uniformity in between. It is not unusual for condenser microphones to have an upper 20~kHz frequency limit compared to the typical 16~kHz limit of dynamic microphones.~\supercite{white} Additionally, the condenser microphone has notably less gain in the 1~to~4~kHz region people are most sensitive to, providing a considerably more balanced response. Taken altogether, condenser-based designs are preferable for applications desiring accurate reproduction.
-\par
+
+A variety of devices exist for transducing sound. Of commercially viable designs, condenser and dynamic microphones are the most common.~\supercite{shambro} Fig. \ref{fig:OktavaMK319vsShureSM58} plots the responses of a condenser microphone and a dynamic microphone. The condenser mic (in red) experiences less attenuation at the extremes and provides greater uniformity in between. It is not unusual for condenser mics to have an upper 20~kHz frequency limit compared to the typical 16~kHz limit experienced by dynamic mics.~\supercite{white} Additionally, the condenser microphone has notably less gain in the 1~to~4~kHz region people are most sensitive to, providing a more balanced response. Generalizing these results, condenser microphones are preferable for applications desiring accurate reproduction.
+	
 \begin{figure}[ht]
   \centering
-    \includegraphics[width=0.5\textwidth]{OktavaMK319vsShureSM58.png}
+	\includegraphics[width=0.5\textwidth]{OktavaMK319vsShureSM58.png}
   \caption{\em Oktava~MK-319 condenser microphone~\supercite{oktava} and Shure~SM58 dynamic microphone\supercite{shure} (20~Hz to 20~kHz)}
 	\label{fig:OktavaMK319vsShureSM58}
 \end{figure}
 
-
 \section{Sensor Structure and Measurement Principle}
-The layout of the sensor portion of the condenser microphone is depicted in Fig. \ref{fig:SensorStructure}. The diaphragm is a thin membrane with acoustic mass that is responsive to air pressure in the target frequency range. The back-plate is a rigid structure offering acoustic impedance through equispaced holes leading into a cavity with acoustic compliance. The complete system is an acoustic mass-impedance-compliance network with a specific resonant frequency.
-
-\par
 \begin{figure}[ht]
   \centering
-    \includegraphics[scale=0.5]{SensorStructure.png}
-  \caption{Condenser microphone structure~\supercite{torio}}
-	\label{fig:SensorStructure}
+	\includegraphics[scale=0.5]{DiaphragmSystem.png}
+  \caption{\em Condenser microphone diaphragm system~\supercite{torio}}
+	\label{fig:DiaphragmSystem}
+\end{figure}
+
+The diaphragm portion of the condenser microphone has a cylindrical form-factor. Its vertical cross-section is depicted in Fig. \ref{fig:DiaphragmSystem}. The diaphragm itself is a thin, tensioned membrane which is responsive to sound pressure in the target frequency range. The back-plate is a rigid structure with distributed holes leading to an internal cavity. Between the membrane and the back-plate is the air-gap which forms the condenser dielectric. An acoustic resistance at the rear of the internal cavity serves as a normalizing vent, allowing the cavity to equalize to atmospheric pressure.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.35]{MembraneDeflection.png}
+	\caption{\em Modeled parabolic membrane deflection owing to uniform sound pressure\supercite{schomburg}}
+	\label{fig:MembraneDeflection}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\begin{tabular}{ c | l }
+		\hline
+		\bf Symbol & \bf Description \\
+		\hline
+		$r$ & radius in cylindrical coordinates \\
+		$R_M$ & membrane radius \\
+		$w$ & deflection along $z$-axis at a particular radius \\
+		$w_c$ & central (apex) deflection, equal to $w(r=0)$ \\
+		$P_0$ & atmospheric pressure \\
+		$\Delta p$ & change in pressure relative to $P_0$ caused by sound \\
+		$F_{p,z}$ & force due to uniform pressure across membrane \\
+		$F_{f,z}$ & force due to membrane tension and frame \\
+		
+	\end{tabular}
+	\caption{\em Symbols used in membrane deflection analysis}
+	\label{tab:MembraneSymbols}
+\end{figure}
+
+\subsection{Membrane Deflection}
+
+When sound pressure impinges upon the membrane, it oscillates with the pressure according to its mechanical properties. Fig. \ref{fig:MembraneDeflection} and Fig. \ref{tab:MembraneSymbols} show modeled parabolic deflection and definitions for the symbolic parameters. The modeled parabolic deflection assumes sound pressure is uniformly distributed across the face of the membrane. This produces purely vertical membrane oscillation along the $z$-axis in cylindrical coordinates, with the greatest deflection $w_c$ occurring at the center of the membrane at the point with the largest moment arm relative to the circumference.
+
+The deflection at any radius $r$ in cylindrical coordinates is described by\supercite{schomburg}:
+
+\begin{figure}[ht]
+	\begin{equation}
+		w(r) = w_c\left(1-\frac{r^2}{R_M^2}\right)
+		\label{eq:Deflection}
+	\end{equation}
 \end{figure}
 
 
-\hfill A. Sheikh, J. Sakai
- 
-\hfill Spring 2014
-	
 \subsection{Subsection Heading Here}
 Subsection text here.
 

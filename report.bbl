@@ -67,6 +67,9 @@
      {}{}%
      {}{}}%
   }
+  \list{publisher}{1}{%
+    {{Sound On Sound}}%
+  }
   \strng{namehash}{WP1}
   \strng{fullhash}{WP1}
   \field{title}{Mic Types \& Characteristics}
@@ -83,13 +86,16 @@
 \entry{oktava}{online}{}
   \name{author}{1}{}{%
     {{}%
-     {GmbH}{G.}%
-     {Oktava}{O.}%
+     {{Oktava GmbH}}{O.}%
+     {}{}%
      {}{}%
      {}{}}%
   }
-  \strng{namehash}{GO1}
-  \strng{fullhash}{GO1}
+  \list{publisher}{1}{%
+    {{Oktava GmbH}}%
+  }
+  \strng{namehash}{O1}
+  \strng{fullhash}{O1}
   \field{title}{Oktava MK-319 condenser microphone}
   \verb{url}
   \verb http://www.oktava-online.com/mk319.htm
@@ -103,13 +109,16 @@
 \entry{shure}{online}{}
   \name{author}{1}{}{%
     {{}%
-     {Incorporated}{I.}%
-     {Shure}{S.}%
+     {{Shure Inc.}}{S.}%
+     {}{}%
      {}{}%
      {}{}}%
   }
-  \strng{namehash}{IS1}
-  \strng{fullhash}{IS1}
+  \list{publisher}{1}{%
+    {{Shure Incorporate}}%
+  }
+  \strng{namehash}{S1}
+  \strng{fullhash}{S1}
   \field{title}{SM58 Vocal Microphone}
   \verb{url}
   \verb http://www.shure.com/americas/products/microphones/sm/sm58-vocal-microp
@@ -122,12 +131,17 @@
 \endentry
 
 \entry{torio}{inproceedings}{}
-  \name{author}{1}{}{%
+  \name{author}{2}{}{%
     {{}%
      {Torio}{T.}%
+     {Guy}{G.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Segota}{S.}%
      {Jeff}{J.}%
      {}{}%
-     {Guy;~Segota}{G.~S.}}%
+     {}{}}%
   }
   \list{organization}{1}{%
     {Audio Engineering Society}%
@@ -147,6 +161,28 @@
   }
   \field{month}{09}
   \field{year}{2000}
+\endentry
+
+\entry{schomburg}{incollection}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Schomburg}{S.}%
+     {Werner~K.}{W.~K.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Springer-Verlag}%
+  }
+  \strng{namehash}{SWK1}
+  \strng{fullhash}{SWK1}
+  \field{booktitle}{Introduction to Microsystem Design}
+  \field{pages}{29\bibrangedash 50}
+  \field{title}{Membranes}
+  \list{location}{1}{%
+    {Berlin}%
+  }
+  \field{year}{2011}
 \endentry
 
 \lossort
