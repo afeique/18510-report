@@ -185,6 +185,33 @@
   \field{year}{2011}
 \endentry
 
+\entry{bruel}{manual}{}
+  \name{author}{1}{}{%
+    {{}%
+     {{Brüel \& Kjær}}{B.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {{Brüel \& Kjær}}%
+  }
+  \strng{namehash}{B1}
+  \strng{fullhash}{B1}
+  \field{number}{BE 1447–11}
+  \field{title}{Microphone Handbook, Vol. 1: Theory}
+  \verb{url}
+  \verb http://www.bksv.com/doc/be1447.pdf
+  \endverb
+  \list{location}{1}{%
+    {Nærum, Denmark}%
+  }
+  \field{year}{1996}
+  \field{urlday}{29}
+  \field{urlmonth}{04}
+  \field{urlyear}{2014}
+\endentry
+
 \lossort
 \endlossort
 

@@ -347,7 +347,7 @@ A variety of devices exist for transducing sound. Of commercially viable designs
 		\tikzstyle{arrow} = [thick,->,>=stealth]
 		
 		\node (mechanical) [header, above of=sound] {\bf Mechanical};
-		\node (electrical) [header, right of=mechanical, node distance=4.5cm] {\bf Electrical};
+		\node (electrical) [header, right of=mechanical, node distance=4.5cm] {\bf Interface Circuit};
 		\node (sound) [round1] {sound pressure};
 		\node (gradient) [round1, below of=sound] {pressure gradient};
 		\node (deflection) [round1, below of=gradient] {membrane deflection};
@@ -362,18 +362,23 @@ A variety of devices exist for transducing sound. Of commercially viable designs
 		\draw [arrow] (capacitance) -- (voltage);
 		\draw [arrow] (voltage) -- (preamp);
 	\end{tikzpicture}
-	\caption{\em Transducer signal chain, first the mechanical process, then the coupled electrical response}
+	\caption{\em Transducer signal chain, first the mechanical process, then the interface circuit}
 	\label{fig:SignalChain}
 \end{figure}
 
-The diaphragm portion of the condenser microphone has a cylindrical form-factor. Its vertical cross-section is depicted in Fig. \ref{fig:DiaphragmSystem}. The diaphragm itself is a thin, tensioned membrane which is responsive to sound pressure in the target frequency range. The back-plate is a rigid structure with distributed holes leading to an internal cavity. Between the membrane and the back-plate is the air-gap which forms the condenser dielectric. An acoustic resistance at the rear of the internal cavity serves as a normalizing vent, allowing the cavity to equalize to atmospheric pressure.
+The diaphragm portion of the condenser microphone has a cylindrical form-factor. Its vertical cross-section is depicted in Fig. \ref{fig:DiaphragmSystem}. The diaphragm itself is a thin, tensioned membrane which is responsive to sound pressure in the target frequency range. The back-plate is a rigid structure with distributed perforations leading to an internal cavity. Between the membrane and the back-plate is the air-gap which forms the condenser dielectric. An acoustic resistance at the rear of the internal cavity serves as a normalizing vent, allowing the cavity to equalize to atmospheric pressure $P_0$.
 
-Condenser microphones convert sound pressure into a voltage signal by the process shown in Fig. \ref{fig:SignalChain}. In the process, sound pressure gives rise to a pressure gradient which causes deflection across the condenser diaphragm. Membrane deflection in turn  causes the capacitance of the condenser to vary. Variations in capacitance produce corresponding changes in voltage on the biasing circuit the condenser is tied to. The resultant AC small-signal can then be extracted from the circuit and fed through a preamplifier to obtain a low output impedance voltage signal representing the source sound.
+Condenser microphones convert sound pressure into a voltage signal by the process shown in Fig. \ref{fig:SignalChain}. In the process, sound pressure gives rise to a pressure gradient which causes deflection across the condenser diaphragm. Membrane deflection in turn  causes the capacitance of the condenser to vary. Variations in capacitance produce corresponding changes in voltage on the interface circuit the condenser is tied to. The resultant AC small-signal can then be extracted from the circuit and fed through a preamplifier to obtain a low output impedance voltage signal representing the source sound.
+
+\begin{figure*}[ht]
+	\centering
+	\includegraphics[scale=0.4]{CouplingCircuit.png}
+	\caption{\em Circuit showing mechanical portion coupled to interface circuit}
+	\label{fig:CouplingCircuit}
+\end{figure*}
 
 \begin{figure}[ht]
-	\centering
-	\includegraphics[scale=0.35]{MembraneDeflection.png}
-	
+	\centering	
 	\begin{equation}
 		\Delta p = \frac{4w_0 d_m}{R_M^2} \frac{E_M}{1-v_M^2} \left( \frac{4}{3} \frac{d_M^2}{R_M^2} + \sigma_0 + \frac{64}{105} \frac{w_0^2}{R_M^2} \right)
 		\label{eq:Apex}
@@ -382,6 +387,15 @@ Condenser microphones convert sound pressure into a voltage signal by the proces
 	\begin{equation}
 		w(r) = w_0\left(1-\frac{r^2}{R_M^2}\right)
 		\label{eq:Deflection}
+	\end{equation}
+	
+	\begin{equation}
+		\begin{split}
+		\int_A dC &= \int_A \frac{\epsilon_0\,dA}{h_0-w(r)} \\
+							&= \int_0^{R_M}{\int_0^{2\pi}{\frac{\epsilon_0 r}{h_0-w(r)}\,d\theta\,dr}} \\
+						C &= \frac{\pi\epsilon_0 R_M^2}{w_0} \mathrm{ln}\left(\frac{h_0}{h_0-w_0}\right)
+		\end{split}
+		\label{eq:Capacitance}
 	\end{equation}
 	
 	\begin{tabular}{ c | l }
@@ -393,46 +407,32 @@ Condenser microphones convert sound pressure into a voltage signal by the proces
 		$d_M$ & membrane thickness \\
 		$w$ & deflection along $z$-axis at a particular radius \\
 		$w_0$ & apex of deflection, equal to $w(r=0)$ \\
-		$P_0$ & atmospheric pressure \\
 		$\Delta p$ & change in pressure relative to $P_0$ caused by sound \\
-		$F_{p,z}$ & force due to uniform pressure across membrane \\
-		$F_{f,z}$ & force due to membrane tension and frame \\
 		$\sigma_0$ & residual stress, modeled with $\sigma_0=0$ \\
 		$E_M$ & Young's Modulus of elasticity for the membrane \\
 		$v_M$ & Poisson's ratio for the membrane \\
+		$h_0$ & dielectric air-gap
 	\end{tabular}
 	
-	\caption{\em Modeled parabolic membrane deflection owing to uniform sound pressure\supercite{schomburg}}
+	\caption{\em Equations for modeling (i) parabolic membrane deflection due to sound pressure, (ii) resulting capacitance}
 	\label{fig:MembraneDeflection}
 \end{figure}
 
 \subsection{Membrane Deflection}
 
-When sound pressure impinges upon the membrane, it oscillates with the pressure according to its mechanical properties. Fig. \ref{fig:MembraneDeflection} shows modeled parabolic deflection in cylindrical coordinates. The model assumes sound pressure is uniformly distributed across the face of the membrane. This produces purely vertical membrane oscillation along the $z$-axis in cylindrical coordinates, with the apex deflection $w_0$ occurring at the center of the membrane owing to the maximized moment arm at that point.
+When sound pressure impinges upon the membrane, it oscillates with the pressure according to its mechanical properties. We model the deflection as being parabolic, as in Fig. \ref{fig:CouplingCircuit}. The model assumes sound pressure is uniformly distributed across the face of the membrane. This produces purely vertical membrane oscillation along the $z$-axis in cylindrical coordinates, with the apex deflection $w_0$ occurring at the center of the membrane owing to the maximized moment arm at that point.
 
-Setting residual stress $\sigma_0=0$, we can solve for the apex deflection using the relation shown in Eq. \ref{eq:Apex}\supercite{schomburg}. The apex deflection $w_0$ can then be used to calculate the modeled parabolic deflection at any radius $r$ with Eq. \ref{eq:Deflection}.
+Setting residual stress $\sigma_0=0$, we can solve for the apex deflection $w_0$ using the relation shown in Eq. \ref{eq:Apex}.\supercite{schomburg} This value can then be used to calculate the modeled parabolic deflection at any radius $r$ with Eq. \ref{eq:Deflection}.
 
 \subsection{Capacitance}
 
-Let the back-plate be held at $z=h_0$ above the membrane to create the dielectric air-gap. Assume there is sound pressure and the membrane has a positive apex deflection $w_0>0$ and is deflected up towards the back-plate. If we treat the face of the membrane as a collection of cylindrical area differentials with $dA = r\,dr\,d\theta$ we can find the total capacitance under deflection by integrating the differential capacitances $dC$ as shown in Eq. \ref{eq:DifferentialCapacitance} and \ref{eq:DeflectedCapacitance}.
-
-\begin{figure}[ht]
-	\begin{equation}
-		\int_A dC = \int_A \frac{\epsilon_0\,dA}{h_0-w(r)} %= \int_0^{R_M} \int_0^{2\pi} \frac{\epsilon_0 r}{h_0-w(r)}\,d\theta\,dr
-		\label{eq:DifferentialCapacitance}
-	\end{equation}
-	
-	\begin{equation}
-		C = \frac{\pi\epsilon_0 R_M^2}{w_0} \mathrm{ln}\left(\frac{h_0}{h_0-w_0}\right)
-		\label{eq:DeflectedCapacitance}
-	\end{equation}
-\end{figure}
-
+Let the back-plate be held at $z=h_0$ away from the membrane to create the dielectric air-gap. Assume there is sound pressure and the membrane has a positive apex deflection $w_0>0$ so it is deflected towards the back-plate. If we treat the face of the membrane as a collection of cylindrical area differentials with $dA = r\,dr\,d\theta$ we can find the total capacitance under deflection by integrating the differential capacitances $dC$ as shown in Eq. \ref{eq:Capacitance}.
 
 %Negative apex deflection $w_0<0$ indicates deflection \emph{away} from the back-plate and produces the expression $h_0+|w_0|$ in the denominator of the natural logarithm.
 
-\subsection{Voltage}
+\section{Interface Circuit}
 
+The interface circuit is the portion of the design responsible for converting variations in capacitance across the condenser into a low impedance voltage signal. It does so in two steps, as shown in Fig. \ref{fig:SignalChain}. First the AC small-signal is extracted to obtain a high output impedance voltage signal. This is then transformed into a low output impedance voltage signal using a preamplifier. The final signal can be sent much longer distances without noticeable degradation.\supercite{bruel}
 
 % An example of a floating figure using the graphicx package.
 % Note that \label must occur AFTER (or within) \caption.
