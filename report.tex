@@ -290,7 +290,7 @@
 
 \begin{abstract}
 %\boldmath
-For the application of accurate voice reproduction, a cost-effective condenser microphone design is considered. Analysis of theoretical characteristics such as sensitivity, dynamic range, and signal-to-noise ratio is presented. In conclusion, quantitative measurements from a working prototype are corroborated with the theoretical analysis.
+For the application of accurate voice reproduction, a cost-effective condenser microphone design is considered. Analysis of theoretical characteristics is presented. Quantitative measurements from a working prototype are then corroborated with the theoretical analysis.
 \end{abstract}
 % IEEEtran.cls defaults to using nonbold math in the Abstract.
 % This preserves the distinction between vectors and scalars. However,
@@ -368,12 +368,12 @@ A variety of devices exist for transducing sound. Of commercially viable designs
 
 The diaphragm portion of the condenser microphone has a cylindrical form-factor. Its vertical cross-section is depicted in Fig. \ref{fig:DiaphragmSystem}. The diaphragm itself is a thin, tensioned membrane which is responsive to sound pressure in the target frequency range. The back-plate is a rigid structure with distributed perforations leading to an internal cavity. Between the membrane and the back-plate is the air-gap which forms the condenser dielectric. An acoustic resistance at the rear of the internal cavity serves as a normalizing vent, allowing the cavity to equalize to atmospheric pressure $P_0$.
 
-Condenser microphones convert sound pressure into a voltage signal by the process shown in Fig. \ref{fig:SignalChain}. In the process, sound pressure gives rise to a pressure gradient which causes deflection across the condenser diaphragm. Membrane deflection in turn  causes the capacitance of the condenser to vary. Variations in capacitance produce corresponding changes in voltage on the interface circuit the condenser is tied to. The resultant AC small-signal can then be extracted from the circuit and fed through a preamplifier to obtain a low output impedance voltage signal representing the source sound.
+Condenser microphones convert sound pressure into a change in capacitance by the process shown in Fig. \ref{fig:SignalChain}. Sound pressure gives rise to a pressure gradient which causes deflection across the condenser diaphragm. Membrane deflection in turn  causes the capacitance of the condenser to vary. %Variations in capacitance produce corresponding changes in voltage on the interface circuit the condenser is coupled to. %The resultant AC small-signal can then be extracted from the circuit and fed through a preamplifier to obtain a low output impedance voltage signal representing the source sound.
 
 \begin{figure*}[ht]
 	\centering
 	\includegraphics[scale=0.4]{CouplingCircuit.png}
-	\caption{\em Circuit showing mechanical portion coupled to interface circuit}
+	\caption{\em Mechanical diaphragm system undergoing deflection while coupled to first part of interface circuit}
 	\label{fig:CouplingCircuit}
 \end{figure*}
 
@@ -420,7 +420,7 @@ Condenser microphones convert sound pressure into a voltage signal by the proces
 
 \subsection{Membrane Deflection}
 
-When sound pressure impinges upon the membrane, it oscillates with the pressure according to its mechanical properties. We model the deflection as being parabolic, as in Fig. \ref{fig:CouplingCircuit}. The model assumes sound pressure is uniformly distributed across the face of the membrane. This produces purely vertical membrane oscillation along the $z$-axis in cylindrical coordinates, with the apex deflection $w_0$ occurring at the center of the membrane owing to the maximized moment arm at that point.
+When sound impinges upon the diaphragm, the membrane oscillates with the sound pressure according to its mechanical properties. We model the deflection with a parabola as shown in Fig. \ref{fig:CouplingCircuit}. The parabolic model assumes sound pressure is uniformly distributed across the face of the membrane and the membrane movement is purely vertical along the $z$-axis (cylindrical coordinates). The apex deflection $w_0$ occurs at the center of the membrane owing to the maximized moment arm at that point.
 
 Setting residual stress $\sigma_0=0$, we can solve for the apex deflection $w_0$ using the relation shown in Eq. \ref{eq:Apex}.\supercite{schomburg} This value can then be used to calculate the modeled parabolic deflection at any radius $r$ with Eq. \ref{eq:Deflection}.
 
@@ -432,7 +432,7 @@ Let the back-plate be held at $z=h_0$ away from the membrane to create the diele
 
 \section{Interface Circuit}
 
-The interface circuit is the portion of the design responsible for converting variations in capacitance across the condenser into a low impedance voltage signal. It does so in two steps, as shown in Fig. \ref{fig:SignalChain}. First the AC small-signal is extracted to obtain a high output impedance voltage signal. This is then transformed into a low output impedance voltage signal using a preamplifier. The final signal can be sent much longer distances without noticeable degradation.\supercite{bruel}
+The interface circuit is the portion of the design responsible for converting variations in capacitance across the condenser into a low impedance voltage signal. It does so in two steps, as shown in Fig. \ref{fig:SignalChain}. First the AC small-signal is extracted to obtain a high output impedance voltage signal using the coupling circuit in Fig. \ref{fig:CouplingCircuit}. This signal is then transformed into a low output impedance voltage signal using a preamplifier. The final signal can be sent much longer distances without noticeable degradation.\supercite{bruel}
 
 % An example of a floating figure using the graphicx package.
 % Note that \label must occur AFTER (or within) \caption.
