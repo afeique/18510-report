@@ -435,7 +435,7 @@ Setting residual stress $\sigma_0=0$, we can solve for the apex deflection $w_0$
 
 \subsection{Capacitance}
 
-Let the back-plate be held at $z=h_0$ away from the membrane to create the dielectric air-gap. When there is no deflection, the condenser has capacitance described by Eq. \ref{Cknot}.
+Let the back-plate be held at $z=h_0$ away from the membrane to create the dielectric air-gap. When there is no deflection, the condenser has capacitance described by Eq. \ref{eq:Cknot}.
 
  Assume there is sound pressure and the membrane has a positive apex deflection $w_0>0$ so it is deflected towards the back-plate. If we treat the face of the membrane as a collection of differential parallel-plate capacitors with area $dA = r\,dr\,d\theta$, we can integrate to find the total capacitance as shown in Eq. \ref{eq:Capacitance}.
 
@@ -445,7 +445,67 @@ Let the back-plate be held at $z=h_0$ away from the membrane to create the diele
 
 The interface circuit is the portion of the design responsible for converting variations in capacitance across the condenser into a low impedance voltage signal. It does so in two steps, as shown in Fig. \ref{fig:SignalChain}. First the AC small-signal is extracted to obtain a high output impedance voltage signal using the coupling circuit in Fig. \ref{fig:CouplingCircuit}. This signal is then transformed into a low output impedance voltage signal using a preamplifier. The final signal can be sent much longer distances without noticeable degradation.\supercite{bruel}
 
+Fig. \ref{fig:SmallSig} represents the small-signal equivalent model of Fig. \ref{fig:CouplingCircuit}. The interface circuit is inherently non-linear, so analyzing its small-signal equivalent model is an effective method of linearizing the relationship between capacitance and output voltage. In the small-signal equivalent model:
 
+\begin{enumerate}
+	\item The DC-blocking coupling capacitor $C_b$ is shorted; 
+	\item The polarizing DC-only voltage source $V_b$ is shorted;
+	\item The condenser's varying capacitance $\Delta C$ itself is modeled as a small-signal current source $i_c$
+\end{enumerate}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.2]{smallSig.png}
+	\caption{\em Small-signal equivalent model of interface circuit}
+	\label{fig:SmallSig}
+\end{figure}
+
+Note that when the polarizing voltage $V_b$ is shorted in the small-signal model, current-limiting resistor $R_B$ is now in parallel with the other devices in the interface circuit, particularly because coupling capacitor $C_B$ is modeled as a short in the small-signal model. Thus, since all elements are in parallel, no additional analysis – Miller approximations, for example – will be necessary. The result is a simplified Norton circuit with small-signal source seen in eq.\ref{eq:SmallCurr} and impedance seen in Eq.\ref{eq:Impedance} 
+
+\begin{figure}[ht]
+
+	\begin{equation}
+		i_c = (j \omega \Delta C) V_b
+		\label{eq:SmallCurr}
+	\end{equation}
+
+	\begin{equation}
+		Z_eq(s) = Z_R || Z_C = \left(\frac{R}{1 + sCR}\right)
+		\label{eq:Impedance}
+	\end{equation}
+
+\end{figure}
+
+where
+
+\begin{figure}[ht]
+
+	\begin{equation}
+		Z_R = R_b || R_i
+		\label{eq:ImpedanceR}
+	\end{equation}
+	\begin{equation}
+		Z_C = C_0 + C_i
+		\label{eq:ImpedanceC}
+	\end{equation}
+
+\end{figure}
+
+By Ohm's Law and principles of source transformation, we derive the voltage output $v_o$, represented by Eq.\ref{eq:outputV}.
+
+\begin{figure}[ht]
+
+	\begin{equation}
+		y =
+		\label{eq:outputV}
+	\end{equation}
+
+	\begin{equation}
+		Z_C = C_0 + C_i
+		\label{eq:ImpedanceC}
+	\end{equation}
+
+\end{figure}
 
 % An example of a floating figure using the graphicx package.
 % Note that \label must occur AFTER (or within) \caption.
