@@ -329,12 +329,12 @@ Capacitive, Condenser, Microphone.
 	\label{fig:OktavaMK319vsShureSM58}
 \end{figure}
 
-A variety of devices exist for transducing sound. Of commercially viable designs, condenser and dynamic microphones are the most common.~\supercite{shambro} Fig. \ref{fig:OktavaMK319vsShureSM58} plots the responses of a condenser microphone and a dynamic microphone. The condenser mic (in red) experiences less attenuation at the extremes and provides greater uniformity in between. It is not unusual for condenser mics to have an upper 20~kHz frequency limit compared to the typical 16~kHz limit experienced by dynamic mics.~\supercite{white} Additionally, the condenser microphone has notably less gain in the 1~to~4~kHz region people are most sensitive to, providing a more balanced response. Generalizing these results, condenser microphones are preferable for applications desiring accurate reproduction.
+A variety of devices exist for transducing sound. Of commercially viable designs, condenser and dynamic microphones are the most common.~\supercite{shambro} Fig.~\ref{fig:OktavaMK319vsShureSM58} plots the responses of a condenser microphone and a dynamic microphone. The condenser mic (in red) experiences less attenuation at the extremes and provides greater uniformity in between. It is not unusual for condenser mics to have an upper 20~kHz frequency limit compared to the typical 16~kHz limit experienced by dynamic mics.~\supercite{white} Additionally, the condenser microphone has notably less gain in the 1~to~4~kHz region people are most sensitive to, providing a more balanced response. Generalizing these results, condenser microphones are preferable for applications desiring accurate reproduction.
 
 \begin{figure}[ht]
   \centering
 	\includegraphics[scale=0.5]{DiaphragmSystem.png}
-  \caption{\em Diaphragm system vertical cross-section~\supercite{torio}}
+  \caption{\em Diaphragm system cross-section~\supercite{torio}}
 	\label{fig:DiaphragmSystem}
 \end{figure}
 
@@ -368,9 +368,9 @@ A variety of devices exist for transducing sound. Of commercially viable designs
 	\label{fig:SignalChain}
 \end{figure}
 
-The diaphragm portion of the condenser microphone has a cylindrical form-factor. Its vertical cross-section is depicted in Fig. \ref{fig:DiaphragmSystem}. The diaphragm itself is a thin, tensioned membrane which is responsive to sound pressure in the target frequency range. The back-plate is a rigid structure with distributed perforations leading to an internal cavity. Between the membrane and the back-plate is the air-gap which forms the condenser dielectric. An acoustic resistance at the rear of the internal cavity serves as a normalizing vent, allowing the cavity to equalize to atmospheric pressure $P_0$.
+The diaphragm portion of the condenser microphone has a cylindrical form-factor. Its cross-section is depicted in Fig.~\ref{fig:DiaphragmSystem}. The diaphragm itself is a thin, tensioned membrane which is responsive to sound pressure in the target frequency range. The back-plate is a rigid structure with distributed perforations leading to an internal cavity. Between the membrane and the back-plate is the air-gap which forms the condenser dielectric. An acoustic resistance at the rear of the internal cavity serves as a normalizing vent, allowing the cavity to equalize to atmospheric pressure $P_0$.
 
-Condenser microphones convert sound pressure into a change in capacitance by the process shown in Fig. \ref{fig:SignalChain}. Sound pressure gives rise to a pressure gradient which causes deflection across the condenser diaphragm. Membrane deflection in turn  causes the capacitance of the condenser to vary. %Variations in capacitance produce corresponding changes in voltage on the interface circuit the condenser is coupled to. %The resultant AC small-signal can then be extracted from the circuit and fed through a preamplifier to obtain a low output impedance voltage signal representing the source sound.
+Condenser microphones convert sound pressure into a change in capacitance by the process shown in Fig.~\ref{fig:SignalChain}. Sound pressure gives rise to a pressure gradient which causes deflection across the condenser diaphragm. Membrane deflection in turn  causes the capacitance of the condenser to vary. %Variations in capacitance produce corresponding changes in voltage on the interface circuit the condenser is coupled to. %The resultant AC small-signal can then be extracted from the circuit and fed through a preamplifier to obtain a low output impedance voltage signal representing the source sound.
 
 \begin{figure*}[ht]
 	\centering
@@ -470,9 +470,9 @@ When only the bias voltage $V_b$ is applied, the membrane has an apex deflection
 
 \section{Interface Circuit}
 
-The interface circuit is the portion of the design responsible for converting variations in capacitance across the condenser into a low impedance voltage signal. It does so in two steps, as shown in Fig. \ref{fig:SignalChain}. First the AC small-signal is extracted to obtain a high output impedance voltage signal using the coupling circuit in Fig. \ref{fig:CouplingCircuit}. This signal is then transformed into a low output impedance voltage signal using a preamplifier. The final signal can be sent much longer distances without noticeable degradation.\supercite{bruel}
+The interface circuit is the portion of the design responsible for converting variations in capacitance across the condenser into a low impedance voltage signal. It does so in two steps, as shown in Fig.~\ref{fig:SignalChain}. First the AC small-signal is extracted to obtain a high output impedance voltage signal using the coupling circuit in Fig.~\ref{fig:CouplingCircuit}. This signal is then transformed into a low output impedance voltage signal using a preamplifier. The final signal can be sent much longer distances without noticeable degradation.\supercite{bruel}
 
-Fig. \ref{fig:SmallSig} represents the small-signal equivalent model of Fig. \ref{fig:CouplingCircuit}. The interface circuit is inherently non-linear, so analyzing its small-signal equivalent model is an effective method of linearizing the relationship between capacitance and output voltage. In the small-signal equivalent model:
+Fig.~\ref{fig:SmallSig} represents the small-signal equivalent model of Fig.~\ref{fig:CouplingCircuit}. The interface circuit is inherently non-linear, so analyzing its small-signal equivalent model is an effective method of linearizing the relationship between capacitance and output voltage. In the small-signal equivalent model:
 
 \begin{enumerate}
 	\item The DC-blocking coupling capacitor $C_b$ is shorted; 
