@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.21)  2 MAY 2014 20:08
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.21)  2 MAY 2014 21:16
 entering extended mode
 **report.tex
-(C:\Users\s\Dropbox\18510\report\report.tex
+(C:\Users\s\Documents\18510-report\report.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -13,7 +13,7 @@ german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
 ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
 an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
-(C:\Users\s\Dropbox\18510\report\IEEEtran.cls
+(C:\Users\s\Documents\18510-report\IEEEtran.cls
 Document Class: IEEEtran 2012/11/21 V1.8c by Harald Hanche-Olsen and Anders Chr
 istensen
 -- Based on V1.7a by Michael Shell
@@ -794,7 +794,7 @@ File: english.lbx 2013/11/25 v2.8a biblatex localization (PK/JW/AB)
 \@quotelevel=\count289
 \@quotereset=\count290
 
-(C:\Users\s\Dropbox\18510\report\report.aux)
+(C:\Users\s\Documents\18510-report\report.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 256.
 LaTeX Font Info:    ... okay on input line 256.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 256.
@@ -816,7 +816,7 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'report.bbl' found.
 
-(C:\Users\s\Dropbox\18510\report\report.bbl)
+(C:\Users\s\Documents\18510-report\report.bbl)
 Package biblatex Info: Reference section=0 on input line 256.
 Package biblatex Info: Reference segment=0 on input line 256.
 
@@ -868,9 +868,9 @@ LaTeX Warning: Reference `Cknot' on page 1 undefined on input line 438.
 [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
- <C:/Users/s/Dropbox/18510/report/OktavaMK319vsShureSM58.png (PNG copy)> <C:/Us
-ers/s/Dropbox/18510/report/DiaphragmSystem.png (PNG copy)>] [2 <C:/Users/s/Drop
-box/18510/report/CouplingCircuit.png (PNG copy)>]
+ <C:/Users/s/Documents/18510-report/OktavaMK319vsShureSM58.png (PNG copy)> <C:/
+Users/s/Documents/18510-report/DiaphragmSystem.png (PNG copy)>] [2 <C:/Users/s/
+Documents/18510-report/CouplingCircuit.png (PNG copy)>]
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¼ in font ptmr7t!
 Missing character: There is no Ã in font ptmr7t!
@@ -886,7 +886,8 @@ Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¦ in font ptmr7t!
  [3
 
-] (C:\Users\s\Dropbox\18510\report\report.aux)
+]
+(C:\Users\s\Documents\18510-report\report.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -894,7 +895,7 @@ Package logreq Info: Writing requests to 'report.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  19801 strings out of 493921
- 382850 string characters out of 3147294
+ 382872 string characters out of 3147294
  537813 words of memory out of 3000000
  22792 multiletter control sequences out of 15000+200000
  39609 words of font info for 69 fonts, out of 3000000 for 9000
