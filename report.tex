@@ -381,13 +381,18 @@ Condenser microphones convert sound pressure into a change in capacitance by the
 
 \begin{figure}[ht]
 	\begin{equation}
-		\Delta p = \frac{4w_0 d_m}{R_M^2} \frac{E_M}{1-v_M^2} \left( \frac{4}{3} \frac{d_M^2}{R_M^2} + \sigma_0 + \frac{64}{105} \frac{w_0^2}{R_M^2} \right)
-		\label{eq:Apex}
+		
+		\label{eq:ElectrostaticForce}
 	\end{equation}
 	
 	\begin{equation}
 		w(r) = w_0\left(1-\frac{r^2}{R_M^2}\right)
 		\label{eq:Deflection}
+	\end{equation}
+	
+	\begin{equation}
+		\Delta p = \frac{4w_0 d_m}{R_M^2} \frac{E_M}{1-v_M^2} \left( \frac{4}{3} \frac{d_M^2}{R_M^2} + \sigma_0 + \frac{64}{105} \frac{w_0^2}{R_M^2} \right)
+		\label{eq:Apex}
 	\end{equation}
 	
 	\begin{equation}
@@ -397,10 +402,7 @@ Condenser microphones convert sound pressure into a change in capacitance by the
 	
 	\begin{equation}
 		\begin{split}
-		&\int_A dC = \int_A \frac{\epsilon_0\,dA}{h_0-w(r)} \\[0.75em]
-							= &\int_0^{R_M}{\int_0^{2\pi}{\frac{\epsilon_0 r}{h_0-w(r)}\,d\theta\,dr}} \\[0.75em]
-						C = &\frac{\epsilon_0\pi R_M^2}{w_0} \mathrm{ln}\left(\frac{h_0}{h_0-w_0}\right)
-		\end{split}
+		C = 
 		\label{eq:Capacitance}
 	\end{equation}
 \end{figure}
@@ -426,6 +428,10 @@ Condenser microphones convert sound pressure into a change in capacitance by the
 	\caption{\em Equations for modeling (i) parabolic membrane deflection due to sound pressure, (ii) resulting capacitance}
 	\label{fig:MembraneDeflection}
 \end{figure}
+
+\subsection{Static Operation}
+
+Applying a DC bias voltage $V_b$ across the condenser gives rise to an electrostatic force $F_v$ within the air-gap described by Eq. \ref{ElectrostaticForce}. The membrane undergoes a corresponding deflection $w_v$ according to the relationship in Eq. \ref{StaticDeflection}.
 
 \subsection{Membrane Deflection}
 
