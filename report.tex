@@ -379,33 +379,6 @@ Condenser microphones convert sound pressure into a change in capacitance by the
 	\label{fig:CouplingCircuit}
 \end{figure*}
 
-\begin{figure}[ht]
-	\begin{equation}
-		
-		\label{eq:ElectrostaticForce}
-	\end{equation}
-	
-	\begin{equation}
-		w(r) = w_0\left(1-\frac{r^2}{R_M^2}\right)
-		\label{eq:Deflection}
-	\end{equation}
-	
-	\begin{equation}
-		\Delta p = \frac{4w_0 d_m}{R_M^2} \frac{E_M}{1-v_M^2} \left( \frac{4}{3} \frac{d_M^2}{R_M^2} + \sigma_0 + \frac{64}{105} \frac{w_0^2}{R_M^2} \right)
-		\label{eq:Apex}
-	\end{equation}
-	
-	\begin{equation}
-		C_0 = \frac{\epsilon_0\pi R_M^2}{h_0}
-		\label{eq:Cknot}
-	\end{equation}
-	
-	\begin{equation}
-		\begin{split}
-		C = 
-		\label{eq:Capacitance}
-	\end{equation}
-\end{figure}
 
 \begin{figure}[ht]
 	\centering	
@@ -416,36 +389,80 @@ Condenser microphones convert sound pressure into a change in capacitance by the
 		$r$ & radius in cylindrical coordinates \\
 		$R_M$ & membrane radius \\
 		$d_M$ & membrane thickness \\
-		$w$ & deflection along $z$-axis at a particular radius \\
-		$w_0$ & apex of deflection, equal to $w(r=0)$ \\
-		$\Delta p$ & change in pressure relative to $P_0$ caused by sound \\
+		$w$ & deflection along $z$-axis at a radius $r$ \\
+		$w_0$ & apex deflection, equal to $w(r=0)$ \\
+		$\Delta p_v$ & change in pressure caused by bias voltage \\
 		$\sigma_0$ & residual stress, modeled with $\sigma_0=0$ \\
-		$E_M$ & Young's Modulus of elasticity for the membrane \\
-		$v_M$ & Poisson's ratio for the membrane \\
-		$h_0$ & dielectric air-gap
+		$E_M$ & Young's Modulus of elasticity (membrane) \\
+		$v_M$ & Poisson's ratio (membrane) \\
+		$h$ & dielectric air-gap
 	\end{tabular}
 	
 	\caption{\em Equations for modeling (i) parabolic membrane deflection due to sound pressure, (ii) resulting capacitance}
 	\label{fig:MembraneDeflection}
 \end{figure}
 
-\subsection{Static Operation}
-
-Applying a DC bias voltage $V_b$ across the condenser gives rise to an electrostatic force $F_v$ within the air-gap described by Eq. \ref{ElectrostaticForce}. The membrane undergoes a corresponding deflection $w_v$ according to the relationship in Eq. \ref{StaticDeflection}.
-
 \subsection{Membrane Deflection}
 
-When sound impinges upon the diaphragm, the membrane oscillates with the sound pressure according to its mechanical properties. We model the deflection with a parabola as shown in Fig. \ref{fig:CouplingCircuit}. The parabolic model assumes sound pressure is uniformly distributed across the face of the membrane and the membrane movement is purely vertical along the $z$-axis (cylindrical coordinates). The apex deflection $w_0$ occurs at the center of the membrane owing to the maximized moment arm at that point.
+When sound impinges upon the diaphragm membrane, it oscillates with the sound pressure according to its mechanical properties. One  approximation for the physical deflection is the parabola as shown in Fig. \ref{fig:CouplingCircuit}. This parabolic model assumes sound pressure is uniformly distributed across the membrane and that its movement is purely vertical along the $z$-axis (cylindrical coordinates). The apex deflection $w_0$ occurs at the center of the membrane owing to the maximized moment arm at that point.
 
 Setting residual stress $\sigma_0=0$, we can solve for the apex deflection $w_0$ using the relation shown in Eq. \ref{eq:Apex}.\supercite{schomburg} This value can then be used to calculate the modeled parabolic deflection at any radius $r$ with Eq. \ref{eq:Deflection}.
 
+\begin{figure}[ht]
+	\begin{equation}
+		w(r) = w_0\left(1-\frac{r^2}{R_M^2}\right)
+		\label{eq:Deflection}
+	\end{equation}
+	
+	\begin{equation}
+		\Delta p = \frac{4w_0 d_m}{R_M^2} \frac{E_M}{1-v_M^2} \left( \frac{4}{3} \frac{d_M^2}{R_M^2} + \sigma_0 + \frac{64}{105} \frac{w_0^2}{R_M^2} \right)
+		\label{eq:Apex}
+	\end{equation}
+\end{figure}
+
+
+\subsection{Deflection Due to Bias Voltage}
+
+With the membrane at $z=0$, let the back-plate be held $h$ away from the membrane at $z=h$ to create the dielectric air-gap. Applying a DC bias voltage $V_b$ across the condenser causes opposite charges to form on the plate. By Coulomb's law, these charges attract and produce an electrostatic force $F_v$ on the membrane described by Eq. \ref{eq:ElectrostaticForce}.\supercite{aip} This force varies with the distance to the back-plate at a particular point and is greater the closer the membrane is to the back-plate. For simplification we assume the force to be uniform across the membrane.
+
+\begin{figure}[ht]
+	\begin{equation}
+		F_v = \frac{1}{2}\frac{V^2\epsilon_0\pi R_M^2}{(h-w_v)^2}
+		\label{eq:ElectrostaticForce}
+	\end{equation}
+\end{figure}
+
+Because we model the electrostatic force as being uniform across the membrane, we describe it as a uniform pressure $\Delta p_v$ shown in Eq. \ref{eq:ElectrostaticPressure}.\supercite{aip} This value can be used in conjunction with Eq. \ref{eq:Apex} to calculate the apex deflection caused by the bias voltage, $w_{v,0}$.
+
+\begin{figure}[ht]
+	\begin{equation}
+		\Delta p_v = \frac{1}{2}\epsilon_0\left(\frac{V_b}{h}\right)^2
+		\label{eq:ElectrostaticPressure}
+	\end{equation}
+\end{figure}
+
 \subsection{Capacitance}
 
-Let the back-plate be held at $z=h_0$ away from the membrane to create the dielectric air-gap. When there is no deflection, the condenser has capacitance described by Eq. \ref{eq:Cknot}.
+When only the bias voltage $V_b$ is applied, the membrane has an apex deflection $w_{v,0}$ towards the back-plate along the positive $z$-axis. Using Eq. \ref{eq:Deflection} and letting $w_0=w_{v,0}$ produces a modeled expression for deflection $w_v(r)$ at any radius $r$ shown in Eq. \ref{eq:VoltageDeflection}. This modeled deflection $w_v(r)$ can be used to calculate the total condenser capacitance by using the differential relationship shown in Eq. \ref{eq:DifferentialCapacitance}. This differential relationship models the condenser as a collection of parallel-plate capacitors having capacitance $dC$ and area $dA=r\,dr\,d\theta$. By integrating over the area of the membrane, we get the expression for capacitance shown in Eq. \ref{eq:Capacitance}.
 
- Assume there is sound pressure and the membrane has a positive apex deflection $w_0>0$ so it is deflected towards the back-plate. If we treat the face of the membrane as a collection of differential parallel-plate capacitors with area $dA = r\,dr\,d\theta$, we can integrate to find the total capacitance as shown in Eq. \ref{eq:Capacitance}.
+\begin{figure}[ht]
+	\begin{equation}
+		w_v(r) = w_{v,0}\left(1-\frac{r^2}{R_M^2}\right)
+		\label{eq:VoltageDeflection}
+	\end{equation}
+	
+	\begin{equation}
+		dC = \frac{\epsilon_0\,dA}{h-w_v} = \frac{\epsilon_0\,r\,dr\,d\theta}{h-w_v}
+		\label{eq:DifferentialCapacitance}
+	\end{equation}
 
-%Negative apex deflection $w_0<0$ indicates deflection \emph{away} from the back-plate and produces the expression $h_0+|w_0|$ in the denominator of the natural logarithm.
+	\begin{equation}
+		C = \frac{\epsilon_0\pi R_M^2}{w_v} \mathrm{ln}\left|\frac{h}{h-w_v}\right|
+		\label{eq:Capacitance}
+	\end{equation}
+\end{figure}
+
+
 
 \section{Interface Circuit}
 

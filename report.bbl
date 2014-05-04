@@ -185,6 +185,28 @@
   \field{year}{2011}
 \endentry
 
+\entry{aip}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Wong}{W.}%
+     {Tony~F.W.}{T.~F.}%
+     {}{}%
+     {George S.K.;~Embleton}{G.~S.~E.}}%
+  }
+  \list{publisher}{1}{%
+    {American Institute of Physics}%
+  }
+  \strng{namehash}{WGSETF1}
+  \strng{fullhash}{WGSETF1}
+  \field{isbn}{1563962845}
+  \field{title}{AIP Handbook of Condenser Microphones: Theory, Calibration and
+  Measurements}
+  \list{location}{1}{%
+    {500 Sunnyside Boulevard, Woodbury, NY 11797-2999}%
+  }
+  \field{year}{1997}
+\endentry
+
 \entry{bruel}{manual}{}
   \name{author}{1}{}{%
     {{}%
