@@ -392,21 +392,25 @@ Condenser microphones convert sound pressure into a change in capacitance by the
 		$w$ & deflection along $z$-axis at a radius $r$ \\
 		$w_0$ & apex deflection, equal to $w(r=0)$ \\
 		$\Delta p_v$ & change in pressure caused by bias voltage \\
-		$\sigma_0$ & residual stress, modeled with $\sigma_0=0$ \\
 		$E_M$ & Young's Modulus of elasticity (membrane) \\
 		$v_M$ & Poisson's ratio (membrane) \\
 		$h$ & dielectric air-gap
 	\end{tabular}
 	
-	\caption{\em Equations for modeling (i) parabolic membrane deflection due to sound pressure, (ii) resulting capacitance}
+	\caption{\em Symbols used to model membrane deflection and calculate capacitance}
 	\label{fig:MembraneDeflection}
 \end{figure}
 
 \subsection{Membrane Deflection}
 
-When sound impinges upon the diaphragm membrane, it oscillates with the sound pressure according to its mechanical properties. One  approximation for the physical deflection is the parabola as shown in Fig. \ref{fig:CouplingCircuit}. This parabolic model assumes sound pressure is uniformly distributed across the membrane and that its movement is purely vertical along the $z$-axis (cylindrical coordinates). The apex deflection $w_0$ occurs at the center of the membrane owing to the maximized moment arm at that point.
+Assuming that
+\begin{enumerate}
+	\item membrane residual stress $\sigma_{M,0}=0$
+	\item pressure $\Delta p$ is uniform across the membrane
+	\item the membrane's movement is purely along the $z$-axis
+\end{enumerate}
 
-Setting residual stress $\sigma_0=0$, we can solve for the apex deflection $w_0$ using the relation shown in Eq. \ref{eq:Apex}.\supercite{schomburg} This value can then be used to calculate the modeled parabolic deflection at any radius $r$ with Eq. \ref{eq:Deflection}.
+The apex deflection $w_0$ can be found using Eq.~\ref{eq:Apex}.\supercite{schomburg} By approximating the three dimensional deflection as a paraboloid, we can derive the expression shown in Eq.~\ref{eq:Deflection} which describes the deflection at any radius $r$ in cylindrical coordinates.
 
 \begin{figure}[ht]
 	\begin{equation}
@@ -423,16 +427,16 @@ Setting residual stress $\sigma_0=0$, we can solve for the apex deflection $w_0$
 
 \subsection{Deflection Due to Bias Voltage}
 
-With the membrane at $z=0$, let the back-plate be held $h$ away from the membrane at $z=h$ to create the dielectric air-gap. Applying a DC bias voltage $V_b$ across the condenser causes opposite charges to form on the plate. By Coulomb's law, these charges attract and produce an electrostatic force $F_v$ on the membrane described by Eq. \ref{eq:ElectrostaticForce}.\supercite{aip} This force varies with the distance to the back-plate at a particular point and is greater the closer the membrane is to the back-plate. For simplification we assume the force to be uniform across the membrane.
+Keeping the membrane at $z=0$, let the back-plate be held a distance $h$ away from the membrane at $z=h$ to create the dielectric air-gap. Applying a DC bias voltage $V_b$ across the condenser causes opposite charges to form on the plate. By Coulomb's law, these charges attract and produce an electrostatic force $F_v$ on the membrane described by Eq.~\ref{eq:ElectrostaticForce}.\supercite{aip} This force varies with the distance to the back-plate at a particular radius and is greater closer to the apex of deflection at $r=0$. For simplification we assume the force to be uniform across the membrane.
 
 \begin{figure}[ht]
 	\begin{equation}
-		F_v = \frac{1}{2}\frac{V^2\epsilon_0\pi R_M^2}{(h-w_v)^2}
+		F_v = \frac{1}{2}V^2\frac{\epsilon_0\pi R_M^2}{(h-w_v)^2}
 		\label{eq:ElectrostaticForce}
 	\end{equation}
 \end{figure}
 
-Because we model the electrostatic force as being uniform across the membrane, we describe it as a uniform pressure $\Delta p_v$ shown in Eq. \ref{eq:ElectrostaticPressure}.\supercite{aip} This value can be used in conjunction with Eq. \ref{eq:Apex} to calculate the apex deflection caused by the bias voltage, $w_{v,0}$.
+Because we model the electrostatic force as being uniform across the membrane, we describe it in Eq.~\ref{eq:ElectrostaticPressure}\supercite{aip} as a uniform pressure $\Delta p_v$. This value can be used in conjunction with Eq.~\ref{eq:Apex} to calculate the apex deflection caused by the bias voltage, $w_{v,0}$.
 
 \begin{figure}[ht]
 	\begin{equation}
@@ -443,7 +447,7 @@ Because we model the electrostatic force as being uniform across the membrane, w
 
 \subsection{Capacitance}
 
-When only the bias voltage $V_b$ is applied, the membrane has an apex deflection $w_{v,0}$ towards the back-plate along the positive $z$-axis. Using Eq. \ref{eq:Deflection} and letting $w_0=w_{v,0}$ produces a modeled expression for deflection $w_v(r)$ at any radius $r$ shown in Eq. \ref{eq:VoltageDeflection}. This modeled deflection $w_v(r)$ can be used to calculate the total condenser capacitance by using the differential relationship shown in Eq. \ref{eq:DifferentialCapacitance}. This differential relationship models the condenser as a collection of parallel-plate capacitors having capacitance $dC$ and area $dA=r\,dr\,d\theta$. By integrating over the area of the membrane, we get the expression for capacitance shown in Eq. \ref{eq:Capacitance}.
+When only the bias voltage $V_b$ is applied, the membrane has an apex deflection $w_{v,0}$ towards the back-plate along the positive $z$-axis. Using Eq.~\ref{eq:Deflection} and letting $w_0=w_{v,0}$ yields Eq.~\ref{eq:VoltageDeflection} which models the deflection caused by the bias voltage. This modeled deflection $w_v(r)$ can be used to calculate the total condenser capacitance by using the differential relationship shown in Eq.~\ref{eq:DifferentialCapacitance}. This differential relationship models the condenser as a collection of parallel-plate capacitors having capacitance $dC$ and area $dA=r\,dr\,d\theta$. By integrating over the area of the membrane, we get the expression for capacitance shown in Eq.~\ref{eq:Capacitance}.
 
 \begin{figure}[ht]
 	\begin{equation}

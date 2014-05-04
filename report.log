@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.21)  4 MAY 2014 15:47
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.21)  4 MAY 2014 16:18
 entering extended mode
 **report.tex
 (C:\Users\s\Documents\18510-report\report.tex
@@ -870,7 +870,7 @@ Documents/18510-report/CouplingCircuit.png (PNG copy)>]
 <smallSig.png, id=24, 1154.3125pt x 362.35374pt>
 File: smallSig.png Graphic file (type png)
  <use smallSig.png>
-Package pdftex.def Info: smallSig.png used on input line 481.
+Package pdftex.def Info: smallSig.png used on input line 485.
 (pdftex.def)             Requested size: 230.85841pt x 72.46945pt.
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
@@ -916,7 +916,7 @@ cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKT
 eX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 1/urw/times/utmri8a.pfb>
-Output written on report.pdf (3 pages, 275879 bytes).
+Output written on report.pdf (3 pages, 275736 bytes).
 PDF statistics:
  60 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
