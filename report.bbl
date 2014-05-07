@@ -234,6 +234,21 @@
   \field{urlyear}{2014}
 \endentry
 
+\entry{amp}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {{Maxim Integrated Products}}{M.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{M1}
+  \strng{fullhash}{M1}
+  \field{title}{{MAX4465-MAX4469}}
+  \field{month}{04}
+  \field{year}{2001}
+\endentry
+
 \lossort
 \endlossort
 

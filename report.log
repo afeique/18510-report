@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.21)  4 MAY 2014 16:23
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.21)  7 MAY 2014 11:55
 entering extended mode
 **report.tex
 (C:\Users\s\Documents\18510-report\report.tex
@@ -852,25 +852,33 @@ Package pdftex.def Info: OktavaMK319vsShureSM58.png used on input line 327.
 <DiaphragmSystem.png, id=5, 347.2975pt x 200.75pt>
 File: DiaphragmSystem.png Graphic file (type png)
  <use DiaphragmSystem.png>
-Package pdftex.def Info: DiaphragmSystem.png used on input line 336.
+Package pdftex.def Info: DiaphragmSystem.png used on input line 339.
 (pdftex.def)             Requested size: 173.64832pt x 100.37474pt.
 
 <CouplingCircuit.png, id=6, 1264.725pt x 401.5pt>
 File: CouplingCircuit.png Graphic file (type png)
  <use CouplingCircuit.png>
-Package pdftex.def Info: CouplingCircuit.png used on input line 377.
+Package pdftex.def Info: CouplingCircuit.png used on input line 380.
 (pdftex.def)             Requested size: 505.88104pt x 160.59715pt.
 
-[1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
+<Paraboloid.png, id=7, 461.725pt x 260.975pt>
+File: Paraboloid.png Graphic file (type png)
+ <use Paraboloid.png>
+Package pdftex.def Info: Paraboloid.png used on input line 420.
+(pdftex.def)             Requested size: 184.68672pt x 104.38815pt.
+ [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
  <C:/Users/s/Documents/18510-report/OktavaMK319vsShureSM58.png (PNG copy)> <C:/
-Users/s/Documents/18510-report/DiaphragmSystem.png (PNG copy)>] [2 <C:/Users/s/
-Documents/18510-report/CouplingCircuit.png (PNG copy)>]
-<smallSig.png, id=24, 1154.3125pt x 362.35374pt>
+Users/s/Documents/18510-report/DiaphragmSystem.png (PNG copy)>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2 <C:/Users/s/Documents/18510-report/CouplingCircuit.png (PNG copy)> <C:/User
+s/s/Documents/18510-report/Paraboloid.png (PNG copy)>]
+<smallSig.png, id=25, 1154.3125pt x 362.35374pt>
 File: smallSig.png Graphic file (type png)
  <use smallSig.png>
-Package pdftex.def Info: smallSig.png used on input line 485.
+Package pdftex.def Info: smallSig.png used on input line 509.
 (pdftex.def)             Requested size: 230.85841pt x 72.46945pt.
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
@@ -878,6 +886,40 @@ Missing character: There is no “ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
+
+
+LaTeX Warning: Reference `ElecTransferFunc' on page 3 undefined on input line 6
+01.
+
+
+LaTeX Warning: Reference `OktavaMK319vsShureSM58' on page 3 undefined on input 
+line 614.
+
+[3 <C:/Users/s/Documents/18510-report/smallSig.png>]
+
+! Package amsmath Error: \begin{split} won't work here.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.640 	\end{split}
+                  
+\Did you forget a preceding \begin{equation}?
+If not, perhaps the `aligned' environment is what you want. 
+
+<PreampNoise.png, id=30, 521.95pt x 542.025pt>
+File: PreampNoise.png Graphic file (type png)
+ <use PreampNoise.png>
+Package pdftex.def Info: PreampNoise.png used on input line 647.
+(pdftex.def)             Requested size: 208.77629pt x 216.80615pt.
+
+
+LaTeX Warning: Citation 'amp' on page 4 undefined on input line 648.
+
+
+LaTeX Warning: Citation 'amp' on page 4 undefined on input line 648.
+
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¼ in font ptmr7t!
 Missing character: There is no Ã in font ptmr7t!
@@ -891,34 +933,45 @@ Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¼ in font ptmr7t!
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¦ in font ptmr7t!
- [3 <C:/Users/s/Documents/18510-report/smallSig.png>]
+[4] [5
+
+ <C:/Users/s/Documents/18510-report/PreampNoise.png (PNG copy)>]
 (C:\Users\s\Documents\18510-report\report.aux)
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
+
+
+Package biblatex Warning: Please (re)run BibTeX on the file(s):
+(biblatex)                report
+(biblatex)                and rerun LaTeX afterwards.
 
 Package logreq Info: Writing requests to 'report.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 19815 strings out of 493921
- 383131 string characters out of 3147294
+ 19838 strings out of 493921
+ 383522 string characters out of 3147294
  535813 words of memory out of 3000000
- 22805 multiletter control sequences out of 15000+200000
- 39609 words of font info for 69 fonts, out of 3000000 for 9000
+ 22825 multiletter control sequences out of 15000+200000
+ 40716 words of font info for 70 fonts, out of 3000000 for 9000
  844 hyphenation exceptions out of 8191
- 55i,9n,60p,857b,1196s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,10n,60p,857b,1196s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
 public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
 sfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/urw/times/utmri8a.pfb>
-Output written on report.pdf (3 pages, 275701 bytes).
+cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/tim
+es/utmri8a.pfb>
+Output written on report.pdf (5 pages, 338836 bytes).
 PDF statistics:
- 60 PDF objects out of 1000 (max. 8388607)
+ 72 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 43 words of extra memory for PDF output out of 10000 (max. 10000000)
 
