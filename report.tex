@@ -603,30 +603,23 @@ It's clear that the voltage at the inverting pin can be expressed as a division 
 		A_{v} = 1 + \frac{Z_{f}}{Z_{-}}
 		\label{eq:transFunc}
 	\end{equation}
-	
 \end{figure}
 
-Thus, the low-frequency (DC) closed-loop gain $A_{CL}$ using $R_{f} = 100 k\Omega$ and $R_{-} = 10 k\Omega$ is simply 11:
+Thus, the low-frequency (DC) closed-loop gain $A_{CL}$ using $R_{f} = 100 k\Omega$ and $R_{-} = 10 k\Omega$ is simply 11 as demonstrated in Eq. \ref{eq:lfGain}.
 
 \begin{figure}[ht]
-
 	\begin{equation}
 		A_{CL} = 1 + \frac{R_{f}}{R_{-}} = 11
 		\label{eq:lfGain}
 	\end{equation}
 	
-\end{figure}
-
-It's commonly accepted to assume the output impedance of a non-inverting operational amplifier configuration is very low, and sometimes approximated as 0$\Omega$. From a more analytical approach, we can derive an expression for the exact output impedance, as seen in Eq. \ref{eq:outZ}. Note that, for the Max4465, the open-loop gain is typically $A_{VOL} = 95 dB = 56,000 V/V$. 
-
-\begin{figure}[ht]
-
 	\begin{equation}
 		R_{out} = R_{0} \frac{A_{CL}}{A_{VOL}}
 		\label{eq:outZ}
 	\end{equation}
-	
 \end{figure}
+
+It's commonly accepted to assume the output impedance of a non-inverting operational amplifier configuration is very low, and sometimes approximated as 0$\Omega$. From a more analytical approach, we can derive an expression for the exact output impedance, as seen in Eq. \ref{eq:outZ}. Note that, for the Max4465, the open-loop gain is typically $A_{VOL} = 95 dB = 56,000 V/V$. 
 
 $R_{0}$ is an internal resistance intrinsic to the amplifier, and note that $A_{VOL}$ greatly exceeds $A_{CL}$, yielding an output impedance that is low and can drive a range from $17 \Omega$ to $300 \Omega$ with acceptable power transfer. 
 
@@ -670,11 +663,12 @@ $R_{0}$ is an internal resistance intrinsic to the amplifier, and note that $A_{
 		\label{eq:PSD}
 	\end{equation}
 
-	\begin{split}
-		PSD &= 4 \times 1.38 \times 10^{-23} \times 300 \times 2 \times 10^7 = 3.3 \times 10^{-13} \; \mathrm{Pa^2\,Hz}
-		\\ pSD &= \sqrt{3.3 \times 10^{-13}} = 5.74 \times 10^{-7} \; \mathrm{Pa\,Hz^{1/2}}
-		\\ p_{rms} = 5.75 \times 10^{-7} \times \sqrt{10^4} = 5.75 \times 10^{-5} \mathrm{Pa}
-	\end{split}
+	\begin{align*}
+		PSD &= 4 \times 1.38 \times 10^{-23} \times 300 \times 2 \times 10^7 \\
+		    &= 3.3 \times 10^{-13} \; \mathrm{Pa^2\,Hz} \\
+		pSD &= \sqrt{3.3 \times 10^{-13}} = 5.75 \times 10^{-7} \; \mathrm{Pa\,Hz^{1/2}} \\
+		p_{rms} &= 5.75 \times 10^{-7} \times \sqrt{10^4} = 5.75 \times 10^{-5}\;\mathrm{Pa}
+	\end{align*}
 	
 \end{figure}
 
@@ -710,9 +704,6 @@ Johnson noise has a power spectral density (PSD) according to the Nyquist formul
 	\caption{\em Noise vs. frequency for Maxim MAX4466 preamplifier, taken directly from datasheet\supercite{amp}}
 	\label{fig:PreampNoise}
 \end{figure}
-
-\clearpage
-\printbibliography
 
 % An example of a floating figure using the graphicx package.
 % Note that \label must occur AFTER (or within) \caption.
@@ -888,6 +879,9 @@ The condenser microphone's theoretical analysis yields expressions for the syste
 % Can be used to pull up biographies so that the bottom of the last one
 % is flush with the other column.
 %\enlargethispage{-5in}
+
+\newpage
+\printbibliography
 
 % that's all folks
 \end{document}
