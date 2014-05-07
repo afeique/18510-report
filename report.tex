@@ -292,7 +292,7 @@
 
 \begin{abstract}
 %\boldmath
-For the application of accurate voice reproduction, a cost-effective condenser microphone design is considered. Analysis of theoretical characteristics is presented. Quantitative measurements from a working prototype are then corroborated with the theoretical analysis.
+For the application of accurate voice reproduction, a simple condenser microphone design is considered. Analysis of theoretical characteristics is presented. Some insights regarding the design of the microphone are considered.
 \end{abstract}
 % IEEEtran.cls defaults to using nonbold math in the Abstract.
 % This preserves the distinction between vectors and scalars. However,
@@ -330,6 +330,9 @@ Capacitive, Condenser, Microphone.
 \end{figure}
 
 A variety of devices exist for transducing sound. Of commercially viable designs, condenser and dynamic microphones are the most common.~\supercite{shambro} Fig.~\ref{fig:OktavaMK319vsShureSM58} plots the responses of a condenser microphone and a dynamic microphone. The condenser mic (in red) experiences less attenuation at the extremes and provides greater uniformity in between. It is not unusual for condenser mics to have an upper 20~kHz frequency limit compared to the typical 16~kHz limit experienced by dynamic mics.~\supercite{white} Additionally, the condenser microphone has notably less gain in the 1~to~4~kHz region people are most sensitive to, providing a more balanced response. Generalizing these results, condenser microphones are preferable for applications desiring accurate reproduction.
+
+% marker
+% Operation of a condenser microphone necessitates a high DC bias voltage with low noise and ripple. This makes condenser microphones less portable and more expensive on the whole than if this had not been the case. Electret condenser microphones (ECMs) overcome this issue by using an electret-foil material  that has its own quasi-permanent charge. 
 
 \begin{figure}[ht]
   \centering
@@ -398,7 +401,7 @@ Condenser microphones convert sound pressure into a change in capacitance by the
 	\end{tabular}
 	
 	\caption{\em Symbols used to model membrane deflection and calculate capacitance}
-	\label{fig:MembraneDeflection}
+	\label{fig:MembraneSymbols}
 \end{figure}
 
 \subsection{Membrane Deflection Due to Impinging Sound Pressure}
@@ -410,7 +413,14 @@ Assuming that
 	\item the membrane's movement is purely along the $z$-axis
 \end{enumerate}
 
-The apex deflection $w_0$ can be found using Eq.~\ref{eq:Apex}.\supercite{schomburg} By approximating the three dimensional deflection as a paraboloid, we can derive the expression shown in Eq.~\ref{eq:Deflection} which describes the deflection at any radius $r$ in cylindrical coordinates.
+The apex deflection $w_0$ can be found using Eq.~\ref{eq:Apex}.\supercite{schomburg} 
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.4]{Paraboloid.png}
+	\caption{\em Membrane deflection modeled as a circular paraboloid}
+	\label{fig:Paraboloid}
+\end{figure}
 
 \begin{figure}[ht]
 	\begin{equation}
@@ -427,18 +437,14 @@ The apex deflection $w_0$ can be found using Eq.~\ref{eq:Apex}.\supercite{schomb
 
 \subsection{Deflection Due to Bias Voltage}
 
-Keeping the membrane at $z=0$, let the back-plate be held a distance $h$ away from the membrane at $z=h$ to create the dielectric air-gap. Applying a DC bias voltage $V_b$ across the condenser causes opposite charges to form on the plate. By Coulomb's law, these charges attract and produce an electrostatic force $F_v$ on the membrane described by Eq.~\ref{eq:ElectrostaticForce}.\supercite{aip} This force varies with the distance to the back-plate at a particular radius and is greater closer to the apex of deflection at $r=0$. For simplification we assume the force to be uniform across the membrane.
+Keeping the membrane at $z=0$, let the back-plate be held a distance $h$ away from the membrane at $z=h$ to create the dielectric air-gap. Applying a DC bias voltage $V_b$ between the membrane and back-plate causes opposing surface charges to form on the plates. By Coulomb's law, these surface charges attract and produce an electrostatic force $F_v$ on the membrane described by Eq.~\ref{eq:ElectrostaticForce}.\supercite{aip} This force varies with the radius and is greater closer to the apex of deflection at $r=0$. Simplifying the force to be uniform across the membrane allows it to be described in Eq.~\ref{eq:ElectrostaticPressure} as a uniform pressure $\Delta p_v$.\supercite{aip}
 
 \begin{figure}[ht]
 	\begin{equation}
 		F_v = \frac{1}{2}V^2\frac{\epsilon_0\pi R_M^2}{(h-w_v)^2}
 		\label{eq:ElectrostaticForce}
 	\end{equation}
-\end{figure}
 
-Because we model the electrostatic force as being uniform across the membrane, we describe it in Eq.~\ref{eq:ElectrostaticPressure}\supercite{aip} as a uniform pressure $\Delta p_v$. This value can be used in conjunction with Eq.~\ref{eq:Apex} to calculate the apex deflection caused by the bias voltage, $w_{v,0}$.
-
-\begin{figure}[ht]
 	\begin{equation}
 		\Delta p_v = \frac{1}{2}\epsilon_0\left(\frac{V_b}{h}\right)^2
 		\label{eq:ElectrostaticPressure}
@@ -447,26 +453,44 @@ Because we model the electrostatic force as being uniform across the membrane, w
 
 \subsection{Capacitance}
 
-When only the bias voltage $V_b$ is applied, the membrane has an apex deflection $w_{v,0}$ towards the back-plate along the positive $z$-axis. Using Eq.~\ref{eq:Deflection} and letting $w_0=w_{v,0}$ yields Eq.~\ref{eq:VoltageDeflection} which models the deflection caused by the bias voltage. This modeled deflection $w_v(r)$ can be used to calculate the total condenser capacitance by using the differential relationship shown in Eq.~\ref{eq:DifferentialCapacitance}. This differential relationship models the condenser as a collection of parallel-plate capacitors having capacitance $dC$ and area $dA=r\,dr\,d\theta$. By integrating over the area of the membrane, we get the expression for capacitance shown in Eq.~\ref{eq:Capacitance}.
+When only the bias voltage $V_b$ is applied, Eq.~\ref{eq:VoltageApex} relates how the pressure due to voltage $\Delta p_v$ produces an apex deflection $w_{v,0}$ towards the back-plate.\supercite{aip} Letting $w_0=w_{v,0}$ in Eq.~\ref{eq:Deflection} yields Eq.~\ref{eq:VoltageDeflection}, an expression $w_v(r)$ for the deflection due to the bias voltage at any radius $r$.
 
 \begin{figure}[ht]
+	\begin{equation}
+		w_{v,0} = \frac{\Delta p_v R_M^2}{4T}
+		\label{eq:VoltageApex}
+	\end{equation}
+	
 	\begin{equation}
 		w_v(r) = w_{v,0}\left(1-\frac{r^2}{R_M^2}\right)
 		\label{eq:VoltageDeflection}
 	\end{equation}
-	
+\end{figure}
+
+The modeled deflection $w_v(r)$ can be used to calculate the total condenser capacitance using the differential relationship shown in Eq.~\ref{eq:DifferentialCapacitance}. The differential relationship models the condenser as a collection of parallel-plate capacitors having capacitance $dC$ and area $dA=r\,dr\,d\theta$. Integrating over the area of the membrane yields the expression for capacitance shown in Eq.~\ref{eq:Capacitance}. Using Eq.~\ref{eq:SeriesLn} to formulate a second-order ($n=2$) series approximation for $\mathrm{ln}(x)$, the logarithm in Eq.~\ref{eq:Capacitance} can be approximated to Eq.~\ref{eq:SeriesCapacitance}.\supercite{aip} The value $C_0$ denotes the capacitance when there is no membrane deflection due to sound, $w_0=0$.
+
+
+\begin{figure}[ht]
 	\begin{equation}
-		dC = \frac{\epsilon_0\,dA}{h-w_v} = \frac{\epsilon_0\,r\,dr\,d\theta}{h-w_v}
+		dC = \frac{\epsilon_0\,dA}{h-w_v} = \frac{\epsilon_0\,r\,dr\,d\theta}{h-w_{v,0}}
 		\label{eq:DifferentialCapacitance}
 	\end{equation}
 
 	\begin{equation}
-		C = \frac{\epsilon_0\pi R_M^2}{w_v} \mathrm{ln}\left|\frac{h}{h-w_v}\right|
+		C = \frac{\epsilon_0\pi R_M^2}{w_{v,0}} \mathrm{ln}\left|\frac{h}{h-w_{v,0}}\right|
 		\label{eq:Capacitance}
 	\end{equation}
+
+	\begin{equation}
+		\mathrm{ln}(x) = \sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n}(x-1)^n
+		\label{eq:SeriesLn}
+	\end{equation}
+
+	\begin{equation}
+		C = \frac{\epsilon_0\pi R_M^2}{h-w_v} \left( 1 - \frac{1}{2}\frac{w_v}{h-w_v} \right)
+		\label{eq:SeriesCapacitance}
+	\end{equation}
 \end{figure}
-
-
 
 \section{Interface Circuit}
 
@@ -503,7 +527,7 @@ Note that when the polarizing voltage $V_b$ is shorted in the small-signal model
 
 \end{figure}
 
-where
+Leading to Eq. \ref{eq:ImpedanceR}
 
 \begin{figure}[ht]
 
@@ -606,6 +630,90 @@ It's commonly accepted to assume the output impedance of a non-inverting operati
 
 $R_{0}$ is an internal resistance intrinsic to the amplifier, and note that $A_{VOL}$ greatly exceeds $A_{CL}$, yielding an output impedance that is low and can drive a range from $17 \Omega$ to $300 \Omega$ with acceptable power transfer. 
 
+
+\section{Sensor Characteristics}
+
+\begin{figure}[ht]
+	\centering	
+	\begin{tabular}{ c | l | l }
+		\hline
+		\bf Symbol & \bf Description & \bf Typ. Value \\
+		\hline
+		$\sigma_M$ & surface mass density & $4.45 \times 10^{-2} \; \mathrm{kg/m^2}$ \\
+		$T$ & room temperature & 300 K \\
+		$k_B$ & Boltzmann constant & $1.38 \times 10^{-23} \; \mathrm{J/K}$ \\
+		$R_A$ & damping resistance & $2 \times 10^7 \mathrm{N \cdot s/m^5}$ \\
+	\end{tabular}
+	
+	\caption{\em Symbols used in analyzing sensor characteristics}
+	\label{fig:CharSymbols}
+\end{figure}
+
+\begin{figure}[ht]
+	\begin{equation}
+		M_e = \frac{1}{2} \frac{V_b}{h-w_0} \cdot \left[ 1 + \frac{C_i}{C_0} \right]^{-1}
+		\label{eq:ElecTransferFunc}
+	\end{equation}
+	
+	\begin{equation}
+		M_p = M_e \cdot \frac{R_M^2}{8T}
+		\label{eq:Sensitivity}
+	\end{equation}
+	
+	\begin{equation}
+		f_H = \frac{2.4048}{2\pi R_M} \left( \frac{T}{\sigma_M} \right)^{1/2}
+		\label{eq:FreqResponse}
+	\end{equation}
+	
+	\begin{equation}
+		PSD = (pSD)^2 = \frac{p_{rms}^2}{\Delta f} = 4 k_B T R_A \; \mathrm{[Pa^2/Hz]}
+		\label{eq:PSD}
+	\end{equation}
+
+	\begin{split}
+		PSD &= 4 \times 1.38 \times 10^{-23} \times 300 \times 2 \times 10^7 = 3.3 \times 10^{-13} \; \mathrm{Pa^2\,Hz}
+		\\ pSD &= \sqrt{3.3 \times 10^{-13}} = 5.74 \times 10^{-7} \; \mathrm{Pa\,Hz^{1/2}}
+		\\ p_{rms} = 5.75 \times 10^{-7} \times \sqrt{10^4} = 5.75 \times 10^{-5} \mathrm{Pa}
+	\end{split}
+	
+\end{figure}
+
+Unless otherwise noted, the equations presented in the following section are derived using \emph{AIP Handbook of Condenser Microphones}, see Ref. \cite{aip}. The electrical transfer function of the biased condenser when there is no deflection due to sound is given by Eq. \ref{eq:ElecTransferFunc}.
+
+\subsection{Sensitivity}
+
+The sensitivity of the microphone is given by Eq. \ref{eq:Sensitivity} where $T$ represents the membrane tension. Based on Eq. \ref{eq:ElecTransferFunc} and Eq. \ref{eq:Sensitivity}, it is evident that the membrane radius can greatly affect the microphone sensitivity. This can be affirmed by the observation that larger diaphragm microphones have greater sensitivity than smaller ones. Intuitively, increasing membrane tension decreases the sensitivity of the sensor by limiting the movement of the membrane.
+
+\subsection{Dynamic Range}
+
+The Maxim MAX4466 is the chosen amplifier for this design. Its datasheet indicates it has a 200 kHz operating bandwidth. In contrast, the condenser's operating bandwidth has an upper-limit around the vacuum resonant frequency of the membrane. This is given by Eq. \ref{eq:FreqResponse} where $\sigma_M$ is the surface mass density of the diaphragm membrane.
+
+It is clear from Eq. \ref{eq:FreqResponse} that a larger bandwidth can be attained with higher tension, smaller membrane radius, and a thinner membrane with a lower surface mass density. Many condenser microphones, including the Oktava MK-319 in Fig. \ref{fig:OktavaMK319vsShureSM58} have a mechanical resonant peak around 10 kHz.
+
+\subsection{Sensitivity to Temperature}
+
+Within the diaphragm system, thermal expansion of the diaphragm membrane due to an increase in temperature causes a reduction in membrane tension $T$. By Eq. \ref{eq:Sensitivity}, this behavior increases the sensitivity but decreases the bandwidth. An increase in temperature additionally produces a corresponding increase in air viscosity. This physical feature of air is important primarily around the mechanical resonant frequency as it causes higher damping which in turn results in a lower and broader resonant peak. 
+
+Temperature increases also affect air density and subsequently the mechanical-acoustic properties of the diaphragm system, namely the acoustic compliances.
+
+The composite result of the above temperature effects is a low sensitivity to temperature, typically on the order of $-0.005 \; \mathrm{dB/K}$.
+
+The amplifier datasheet shows the op-amp performance across a range of temperatures. As the implicit use for the microphone presented in this article is around room temperature, focus is given to the temperature range of 293K to 300K. Within this region, the op-amp's temperature dependency is quite linear. The most notable impact of temperature is its effect on large-signal gain which decreases by approximately $-0.35 \; \mathrm{dB/K}$ in this region.
+
+\subsection{Noise Analysis}
+
+Johnson noise has a power spectral density (PSD) according to the Nyquist formula shown in Eq. \ref{eq:PSD} where $T$ is the temperature in degrees Kelvin. The pressure spectral density (pSD) is simply the square-root of the PSD. Results from Eq. \ref{eq:PSD} can be used to calculate the RMS noise pressure experienced by the microphone. Calculations are given with $\Delta f = 10 \; \mathrm{kHz}$. Preamplifier noise is taken directly from the preamplifier datasheet and displayed in Fig. \ref{fig:PreampNoise}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.4]{PreampNoise.png}
+	\caption{\em Noise vs. frequency for Maxim MAX4466 preamplifier, taken directly from datasheet\supercite{amp}}
+	\label{fig:PreampNoise}
+\end{figure}
+
+\clearpage
+\printbibliography
+
 % An example of a floating figure using the graphicx package.
 % Note that \label must occur AFTER (or within) \caption.
 % For figures, \caption should occur after the \includegraphics.
@@ -691,8 +799,10 @@ $R_{0}$ is an internal resistance intrinsic to the amplifier, and note that $A_{
 
 
 \section{Conclusion}
-The conclusion goes here.
 
+The condenser microphone's theoretical analysis yields expressions for the system capacitance, voltage output and sensitivity based on geometries. These equations can be used to gain insight about how to improve the operation of the microphone, e.g. increased the membrane radius to increase sensitivity. 
+
+% 1.53 \times 10^{-11} F
 
 
 
@@ -778,8 +888,6 @@ The conclusion goes here.
 % Can be used to pull up biographies so that the bottom of the last one
 % is flush with the other column.
 %\enlargethispage{-5in}
-
-\printbibliography
 
 % that's all folks
 \end{document}

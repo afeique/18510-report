@@ -234,6 +234,24 @@
   \field{urlyear}{2014}
 \endentry
 
+\entry{amp}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {{Maxim Integrated Products}}{M.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{M1}
+  \strng{fullhash}{M1}
+  \field{title}{{MAX4465-MAX4469}}
+  \verb{url}
+  \verb http://www.adafruit.com/datasheets/MAX4465-MAX4469.pdf
+  \endverb
+  \field{month}{04}
+  \field{year}{2001}
+\endentry
+
 \lossort
 \endlossort
 
