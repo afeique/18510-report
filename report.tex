@@ -374,7 +374,7 @@ Condenser microphones convert sound pressure into a change in capacitance by the
 
 \begin{figure*}[ht]
 	\centering
-	\includegraphics[scale=0.4]{CouplingCircuit.png}
+	\includegraphics[scale=0.75]{CouplingCircuit2.png}
 	\caption{\em Mechanical diaphragm system undergoing deflection while coupled to first part of interface circuit}
 	\label{fig:CouplingCircuit}
 \end{figure*}
@@ -401,7 +401,7 @@ Condenser microphones convert sound pressure into a change in capacitance by the
 	\label{fig:MembraneDeflection}
 \end{figure}
 
-\subsection{Membrane Deflection}
+\subsection{Membrane Deflection Due to Impinging Sound Pressure}
 
 Assuming that
 \begin{enumerate}
@@ -477,7 +477,7 @@ Fig.~\ref{fig:SmallSig} represents the small-signal equivalent model of Fig.~\re
 \begin{enumerate}
 	\item The DC-blocking coupling capacitor $C_b$ is shorted; 
 	\item The polarizing DC-only voltage source $V_b$ is shorted;
-	\item The condenser's varying capacitance $\Delta C$ itself is modeled as a small-signal current source $i_c$
+	\item The condenser's varying capacitance $\Delta C$ itself is modeled as a small-signal current source $i_c$.
 \end{enumerate}
 
 \begin{figure}[ht]
@@ -487,7 +487,7 @@ Fig.~\ref{fig:SmallSig} represents the small-signal equivalent model of Fig.~\re
 	\label{fig:SmallSig}
 \end{figure}
 
-Note that when the polarizing voltage $V_b$ is shorted in the small-signal model, current-limiting resistor $R_B$ is now in parallel with the other devices in the interface circuit, particularly because coupling capacitor $C_B$ is modeled as a short in the small-signal model. Thus, since all elements are in parallel, no additional analysis – Miller approximations, for example – will be necessary. The result is a simplified Norton circuit with small-signal source seen in eq.\ref{eq:SmallCurr} and impedance seen in Eq.\ref{eq:Impedance} 
+Note that when the polarizing voltage $V_b$ is shorted in the small-signal model, current-limiting resistor $R_b$ is now in parallel with the other devices in the interface circuit, particularly because coupling capacitor $C_B$ is modeled as a short in the small-signal model. Thus, since all elements are in parallel, no additional analysis (Miller approximations, for example) will be necessary. The result is a simplified Norton circuit with small-signal source seen in Eq. \ref{eq:SmallCurr} and impedance seen in Eq. \ref{eq:Impedance}.
 
 \begin{figure}[ht]
 
@@ -497,7 +497,7 @@ Note that when the polarizing voltage $V_b$ is shorted in the small-signal model
 	\end{equation}
 
 	\begin{equation}
-		Z_eq(s) = Z_R || Z_C = \left(\frac{R}{1 + sCR}\right)
+		Z_{eq}(s) = Z_{R_{eq}} || Z_{C_{eq}} = \left(\frac{R_{eq}}{1 + sR_{eq}C_{eq}}\right)
 		\label{eq:Impedance}
 	\end{equation}
 
@@ -508,31 +508,103 @@ where
 \begin{figure}[ht]
 
 	\begin{equation}
-		Z_R = R_b || R_i
+		R_{eq} = R_b || R_i
 		\label{eq:ImpedanceR}
 	\end{equation}
 	\begin{equation}
-		Z_C = C_0 + C_i
+		C_{eq} = C_0 + C_i
 		\label{eq:ImpedanceC}
 	\end{equation}
 
 \end{figure}
 
-By Ohm's Law and principles of source transformation, we derive the voltage output $v_o$, represented by Eq.\ref{eq:outputV}.
+By Ohm's Law and principles of source transformation, we derive the voltage output $v_o$, represented by Eq.\ref{eq:outputV}. The frequency-independent voltage at the output, then, is simply the magnitude of this.  
 
 \begin{figure}[ht]
 
 	\begin{equation}
-		y =
+		v_o(s) = i_c(Z_{eq}(s)) = \frac{\Delta C}{C_{eq}} V_b \frac{sR_{eq}C_{eq}}{1 + sR_{eq}C_{eq}}
 		\label{eq:outputV}
 	\end{equation}
 
 	\begin{equation}
-		Z_C = C_0 + C_i
-		\label{eq:ImpedanceC}
+		v_O = \frac{\Delta C}{C_{eq}} V_b = \frac{\Delta C}{C_0} \left(1 + \frac{C_i}{C_0}\right ) V_b
+		\label{eq:outputFI}
 	\end{equation}
 
 \end{figure}
+
+We must also consider the frequency response, as the most important bands of interest must be present at the output. In Eq.~\ref{eq:cutoff}, we determine a low-frequency cutoff.
+
+\begin{figure}[ht]
+
+	\begin{equation}
+		f_c = \frac{1}{2 \pi R_{eq}C_{eq}}
+		\label{eq:cutoff}
+	\end{equation}
+
+\end{figure}
+
+It's necessary to cascade this circuit into a pre-amplifier. Rather than for gain, this stage is primarily for impedance matching purposes. The following diagram exhibits a pre-amplifier that, for our purposes, is built from the MAX4466 operational amplifier. 
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.24]{Amplifier2.png}
+	\caption{\em Amplifier stage (seen on the right)}
+	\label{fig:Amplifier}
+\end{figure}
+
+Note that in this configuration, $R_i$ in our small-signal model is encapsulated by the $1 M\Omega$ self-biasing resistors in parallel, since the DC-only power source is shorted in a small-signal analysis. These self-biasing resistors are large to match impedance with the very large input resistance at the op-amp pins. We also assume that $C_i = 0$. The current-limiting resistor $R_b$ is realized with the two $2 k\Omega$ resistors and coupling capacitor $C_b$ is realized with the $0.01 \mu F$ DC-blocking capacitor. 
+
+It's clear that the voltage at the inverting pin can be expressed as a division of admittances. Here we have a non-inverting operational amplifier configuration with a potential divider network between $Z_{-}$ and $Z_{f}$. The transfer in signal can be expressed with Eq. \ref{eq:transFunc}.
+
+\begin{figure}[ht]
+
+	\begin{equation}
+		V_{-} = V_{out} \frac{G_{f}}{G_{-} + G_{f}}
+		\label{eq:invertingPin}
+	\end{equation}
+	
+	\begin{equation}
+		G_{-} = (Z_{-})^{-1} = \frac{sC_{-}}{1 + sR_{-}C_{-}} 
+		\label{eq:Gminus}
+	\end{equation}
+
+	\begin{equation}
+		G_{f} = (Z_{f})^{-1} = sC_{f} + \frac{1}{R_{f}}
+		\label{eq:Gf}
+	\end{equation}
+	
+	\begin{equation}
+		A_{v} = 1 + \frac{Z_{f}}{Z_{-}}
+		\label{eq:transFunc}
+	\end{equation}
+	
+\end{figure}
+
+Thus, the low-frequency (DC) closed-loop gain $A_{CL}$ using $R_{f} = 100 k\Omega$ and $R_{-} = 10 k\Omega$ is simply 11:
+
+\begin{figure}[ht]
+
+	\begin{equation}
+		A_{CL} = 1 + \frac{R_{f}}{R_{-}} = 11
+		\label{eq:lfGain}
+	\end{equation}
+	
+\end{figure}
+
+It's commonly accepted to assume the output impedance of a non-inverting operational amplifier configuration is very low, and sometimes approximated as 0$\Omega$. From a more analytical approach, we can derive an expression for the exact output impedance, as seen in Eq. \ref{eq:outZ}. Note that, for the Max4465, the open-loop gain is typically $A_{VOL} = 95 dB = 56,000 V/V$. 
+
+\begin{figure}[ht]
+
+	\begin{equation}
+		R_{out} = R_{0} \frac{A_{CL}}{A_{VOL}}
+		\label{eq:outZ}
+	\end{equation}
+	
+\end{figure}
+
+$R_{0}$ is an internal resistance intrinsic to the amplifier, and note that $A_{VOL}$ greatly exceeds $A_{CL}$, yielding an output impedance that is low and can drive a range from $17 \Omega$ to $300 \Omega$ with acceptable power transfer. 
 
 % An example of a floating figure using the graphicx package.
 % Note that \label must occur AFTER (or within) \caption.
